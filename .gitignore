@@ -28,8 +28,9 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
+# local env files (but NOT ios/.xcode.env.local which is needed for builds)
 .env*.local
+!ios/.xcode.env.local
 
 # typescript
 *.tsbuildinfo
