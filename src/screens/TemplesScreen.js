@@ -19,9 +19,10 @@ export default function TemplesScreen({ navigation }) {
   const filtered = useMemo(() => {
     return temples.filter((temple) => {
       const matchesCategory = category === 'all' || temple.category === category;
+      const searchLower = search.toLowerCase();
       const matchesSearch = search === '' ||
-        temple.name[language].toLowerCase().includes(search.toLowerCase()) ||
-        temple.name[language === 'hi' ? 'en' : 'hi'].toLowerCase().includes(search.toLowerCase());
+        temple.name[language].toLowerCase().includes(searchLower) ||
+        temple.name[language === 'hi' ? 'en' : 'hi'].toLowerCase().includes(searchLower);
       return matchesCategory && matchesSearch;
     });
   }, [temples, category, search, language]);

@@ -16,7 +16,7 @@ const NAV_CARDS = [
   { key: 'mandirs', icon: 'business', labelKey: 'home_mandirs', tab: 'Mandirs', color: '#FF6B35' },
   { key: 'leela', icon: 'leaf', labelKey: 'home_leelaSthals', tab: 'LeelaSthals', color: '#6A1B9A' },
   { key: 'info', icon: 'information-circle', labelKey: 'home_visitorInfo', tab: 'Info', color: '#1565C0' },
-  { key: 'about', icon: 'information', labelKey: 'home_about', tab: null, color: '#2E7D32' },
+  { key: 'about', icon: 'information', labelKey: 'home_about', tab: 'Info', screen: 'About', color: '#2E7D32' },
 ];
 
 export default function HomeScreen({ navigation }) {
@@ -26,7 +26,11 @@ export default function HomeScreen({ navigation }) {
 
   const handleNavCard = (card) => {
     if (card.tab) {
-      navigation.navigate(card.tab);
+      if (card.screen) {
+        navigation.navigate(card.tab, { screen: card.screen });
+      } else {
+        navigation.navigate(card.tab);
+      }
     }
   };
 

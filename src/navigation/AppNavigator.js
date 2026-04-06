@@ -46,6 +46,32 @@ function TemplesStack() {
   );
 }
 
+function InfoStack() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: colors.secondary },
+        headerTintColor: colors.white,
+        headerTitleStyle: { fontWeight: '700' },
+      }}
+    >
+      <Stack.Screen
+        name="VisitorInfo"
+        component={VisitorInfoScreen}
+        options={{ title: t.visitor_title }}
+      />
+      <Stack.Screen
+        name="About"
+        component={AboutScreen}
+        options={{ title: t.about_title }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 export default function AppNavigator() {
   const { language } = useLanguage();
   const t = translations[language];
@@ -97,10 +123,10 @@ export default function AppNavigator() {
         />
         <Tab.Screen
           name="Info"
-          component={VisitorInfoScreen}
+          component={InfoStack}
           options={{
             title: t.navInfo,
-            headerTitle: t.visitor_title,
+            headerShown: false,
           }}
         />
       </Tab.Navigator>

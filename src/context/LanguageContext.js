@@ -16,7 +16,7 @@ export function LanguageProvider({ children }) {
       const saved = await AsyncStorage.getItem('language');
       if (saved) setLanguage(saved);
     } catch (e) {
-      // use default
+      console.warn('Failed to load language:', e);
     } finally {
       setLoading(false);
     }
@@ -27,7 +27,9 @@ export function LanguageProvider({ children }) {
     setLanguage(next);
     try {
       await AsyncStorage.setItem('language', next);
-    } catch (e) {}
+    } catch (e) {
+      console.warn('Failed to save language:', e);
+    }
   };
 
   return (
