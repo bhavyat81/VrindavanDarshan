@@ -18,6 +18,9 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 function TemplesStack() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -35,8 +38,8 @@ function TemplesStack() {
         name="TempleDetail"
         component={TempleDetailScreen}
         options={({ route }) => ({
-          title: route.params?.templeName || 'Temple Details',
-          headerBackTitle: 'Back',
+          title: route.params?.templeName || t.temples_title,
+          headerBackTitle: t.navMandirs,
         })}
       />
     </Stack.Navigator>
