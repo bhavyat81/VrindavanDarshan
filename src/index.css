@@ -1,0 +1,1106 @@
+/* ===== GLOBAL RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --saffron: #FF8C42;
+  --saffron-deep: #FF6B35;
+  --maroon: #8B1A1A;
+  --maroon-light: #A52020;
+  --gold: #DAA520;
+  --gold-light: #F5C842;
+  --cream: #FFF8E7;
+  --cream-dark: #FFF0C8;
+  --text-dark: #2C1810;
+  --text-mid: #5C3317;
+  --text-light: #8B6340;
+  --white: #FFFFFF;
+  --shadow: 0 4px 20px rgba(139, 26, 26, 0.12);
+  --shadow-card: 0 2px 16px rgba(139, 26, 26, 0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', 'Tiro Devanagari Hindi', Georgia, serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+html[lang="hi"] body,
+html[lang="hi"] .hero__tagline,
+html[lang="hi"] .page-title,
+html[lang="hi"] .nav-link,
+html[lang="hi"] .temple-card__name,
+html[lang="hi"] .detail-banner__name {
+  font-family: 'Tiro Devanagari Hindi', 'Lora', serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, var(--maroon) 0%, #6B0F0F 100%);
+  color: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-lotus {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 6px rgba(218,165,32,0.6));
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.2;
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+}
+
+.header-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255,248,231,0.8);
+  font-style: italic;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ===== NAV ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  color: rgba(255,248,231,0.85);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--gold-light);
+  background: rgba(218,165,32,0.15);
+}
+
+.nav-link.active {
+  color: var(--gold-light);
+  background: rgba(218,165,32,0.2);
+  font-weight: 600;
+}
+
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  background: rgba(218,165,32,0.2);
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  background: var(--gold);
+  color: var(--maroon);
+  font-weight: 700;
+}
+
+/* ===== HAMBURGER (mobile) ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(160deg, #6B0F0F 0%, var(--maroon) 30%, #A0360A 70%, #FF6B35 100%);
+  color: var(--cream);
+  padding: 5rem 1.25rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 480px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero__decor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.25;
+  font-size: 2.5rem;
+  user-select: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.hero__om {
+  font-size: 3.5rem;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(218,165,32,0.6);
+  margin-bottom: 0.5rem;
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+.hero__tagline {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgba(255,248,231,0.9);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.hero__description {
+  font-size: 1rem;
+  color: rgba(255,248,231,0.85);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-deep) 100%);
+  color: var(--white);
+  border-color: var(--saffron);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, #FF9B5C 0%, var(--saffron) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--gold);
+}
+
+.btn--outline:hover {
+  background: rgba(218,165,32,0.2);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn--lg {
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+}
+
+.btn--back {
+  color: var(--maroon);
+  border-color: var(--maroon);
+  margin-bottom: 1.5rem;
+  background: transparent;
+}
+
+.btn--back:hover {
+  background: var(--maroon);
+  color: var(--cream);
+}
+
+/* ===== DISCLAIMER BANNER ===== */
+.disclaimer-banner {
+  background: linear-gradient(135deg, #FFF3CD, #FFE69C);
+  border-left: 4px solid var(--gold);
+  padding: 0.7rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+/* ===== QUICK NAV SECTION ===== */
+.quick-nav {
+  padding: 3rem 1.25rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--maroon);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.quick-nav__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.nav-card {
+  background: var(--white);
+  border: 2px solid rgba(218,165,32,0.2);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all var(--transition);
+  box-shadow: var(--shadow-card);
+}
+
+.nav-card:hover {
+  border-color: var(--saffron);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255,107,53,0.2);
+}
+
+.nav-card__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.nav-card__title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 0.4rem;
+}
+
+.nav-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ===== LOTUS DIVIDER ===== */
+.lotus-divider {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  letter-spacing: 0.3rem;
+}
+
+/* ===== PAGE LAYOUT ===== */
+.page {
+  padding: 2rem 1.25rem 3rem;
+  flex: 1;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ===== SEARCH & FILTER ===== */
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid rgba(218,165,32,0.3);
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--saffron);
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border: 2px solid rgba(139,26,26,0.25);
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--text-mid);
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--saffron);
+  color: var(--saffron-deep);
+}
+
+.filter-btn--active {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+  border-color: var(--maroon);
+  color: var(--cream);
+  font-weight: 600;
+}
+
+/* ===== TEMPLE CARD ===== */
+.temples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.temple-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(218,165,32,0.2);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.temple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(139,26,26,0.15);
+  border-color: rgba(218,165,32,0.5);
+}
+
+.temple-card__banner {
+  background: linear-gradient(135deg, var(--maroon) 0%, #6B0F0F 50%, #A0360A 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.temple-card__icon {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 8px rgba(218,165,32,0.5));
+}
+
+.temple-card__body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.temple-card__name {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--maroon);
+  line-height: 1.35;
+}
+
+.temple-card__deity {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+.temple-card__deity span {
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.temple-card__location {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.temple-card__btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ===== BADGES ===== */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge--prachin {
+  background: rgba(139,26,26,0.12);
+  color: var(--maroon);
+  border: 1px solid rgba(139,26,26,0.3);
+}
+
+.badge--historical {
+  background: rgba(218,165,32,0.15);
+  color: #7A5C00;
+  border: 1px solid rgba(218,165,32,0.4);
+}
+
+.badge--modern {
+  background: rgba(255,107,53,0.12);
+  color: #8B3A00;
+  border: 1px solid rgba(255,107,53,0.3);
+}
+
+.badge--leela {
+  background: rgba(34,120,60,0.1);
+  color: #1A5C2A;
+  border: 1px solid rgba(34,120,60,0.3);
+}
+
+.badge--detail {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+}
+
+/* ===== DETAIL PAGE ===== */
+.detail-banner {
+  background: linear-gradient(135deg, var(--maroon) 0%, #6B0F0F 40%, #A0360A 100%);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  color: var(--cream);
+  flex-wrap: wrap;
+}
+
+.detail-banner__icon {
+  font-size: 5rem;
+  filter: drop-shadow(0 0 12px rgba(218,165,32,0.5));
+  flex-shrink: 0;
+}
+
+.detail-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-banner__name {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--gold-light);
+  line-height: 1.25;
+}
+
+.detail-banner__deity {
+  font-size: 0.95rem;
+  color: rgba(255,248,231,0.9);
+}
+
+.detail-banner__deity strong {
+  color: var(--gold-light);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(218,165,32,0.2);
+}
+
+.detail-card--story {
+  grid-column: 1 / -1;
+}
+
+.detail-card--full {
+  grid-column: 1 / -1;
+}
+
+.detail-card__title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1.15rem;
+  color: var(--maroon);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(218,165,32,0.3);
+}
+
+.detail-story {
+  font-size: 0.97rem;
+  line-height: 1.9;
+  color: var(--text-dark);
+}
+
+.detail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-list li {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(218,165,32,0.1);
+}
+
+/* ===== TIMINGS ===== */
+.timings {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.timings__season {
+  flex: 1;
+  min-width: 180px;
+}
+
+.timings__season h4 {
+  font-size: 0.9rem;
+  color: var(--maroon);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.timings__season p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  margin-bottom: 0.2rem;
+}
+
+.timings__note {
+  font-size: 0.85rem !important;
+  color: #8B3A00 !important;
+  background: #FFF3CD;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+  margin-top: 0.4rem;
+}
+
+.timings__disclaimer {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(218,165,32,0.3);
+}
+
+/* ===== DO'S AND DON'TS ===== */
+.dos-donts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.dos h3,
+.donts h3 {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dos h3 { color: #1A6B2A; }
+.donts h3 { color: #8B1A1A; }
+
+.dos ul,
+.donts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dos li,
+.donts li {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  position: relative;
+  border-radius: 6px;
+}
+
+.dos li { background: rgba(34,120,60,0.05); border-left: 3px solid #22783C; }
+.donts li { background: rgba(139,26,26,0.05); border-left: 3px solid var(--maroon); }
+
+/* ===== VISITOR INFO PAGE ===== */
+.info-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(218,165,32,0.2);
+}
+
+.info-section__title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1.35rem;
+  color: var(--maroon);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid rgba(218,165,32,0.3);
+}
+
+.info-text {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.reach-card {
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  border-left: 4px solid var(--saffron);
+}
+
+.reach-card__mode {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1rem;
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.reach-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.season-card {
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(218,165,32,0.25);
+}
+
+.season-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.season-card h4 {
+  font-size: 0.9rem;
+  color: var(--maroon);
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.season-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.festivals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.festival-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  border: 1px solid rgba(218,165,32,0.2);
+}
+
+.festival-card__icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.festival-card__body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 0.2rem;
+}
+
+.festival-card__time {
+  font-size: 0.78rem;
+  color: var(--gold);
+  background: rgba(218,165,32,0.12);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.festival-card__body p {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tips-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+.tips-list__icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-intro {
+  background: linear-gradient(135deg, var(--maroon) 0%, #6B0F0F 100%);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--cream);
+}
+
+.about-om {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 4rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(218,165,32,0.5);
+}
+
+.about-intro__text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255,248,231,0.95);
+}
+
+.about-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(218,165,32,0.2);
+  border-top: 4px solid var(--saffron);
+}
+
+.about-card__title {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1.05rem;
+  color: var(--maroon);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-card__text {
+  font-size: 0.93rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+.about-dedication {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--maroon);
+  font-style: italic;
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  border-top: 2px solid rgba(218,165,32,0.3);
+}
+
+/* ===== NO RESULTS ===== */
+.no-results {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  padding: 3rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(135deg, var(--maroon) 0%, #3D0A0A 100%);
+  color: var(--cream);
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.footer-devotion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-lotus {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(218,165,32,0.5));
+}
+
+.footer-dedication {
+  font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  color: rgba(255,248,231,0.65);
+  max-width: 500px;
+  margin: 0 auto 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-rights {
+  font-size: 0.78rem;
+  color: rgba(255,248,231,0.45);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #6B0F0F 0%, var(--maroon) 100%);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    gap: 0.25rem;
+  }
+
+  .nav--open { display: flex; }
+
+  .header { position: relative; }
+
+  .nav-link {
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 3rem 1.25rem;
+    min-height: auto;
+  }
+
+  .hero__decor { display: none; }
+
+  .detail-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .dos-donts {
+    grid-template-columns: 1fr;
+  }
+
+  .temples-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header-subtitle { display: none; }
+  .quick-nav__grid { grid-template-columns: 1fr 1fr; }
+  .temples-grid { grid-template-columns: 1fr; }
+  .reach-grid { grid-template-columns: 1fr; }
+  .festivals-grid { grid-template-columns: 1fr; }
+  .about-sections { grid-template-columns: 1fr; }
+}
