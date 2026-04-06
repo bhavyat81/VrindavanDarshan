@@ -1,4 +1,4 @@
-const visitorInfo = {
+export const visitorInfo = {
   howToReach: {
     hi: {
       title: 'कैसे पहुँचें',
@@ -221,4 +221,3 @@ const visitorInfo = {
   },
 };
 
-export default visitorInfo;

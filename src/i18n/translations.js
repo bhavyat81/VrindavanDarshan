@@ -1,217 +1,92 @@
-const translations = {
+export const translations = {
   hi: {
-    // Header
-    appName: 'वृन्दावन दर्शन',
-    appSubtitle: 'पवित्र धाम की यात्रा',
-    nav: {
-      home: 'मुख्य पृष्ठ',
-      temples: 'मंदिर',
-      leelaSthals: 'लीला स्थल',
-      visitorInfo: 'यात्री जानकारी',
-      about: 'परिचय',
-    },
-    langToggle: 'English',
-
-    // Home Page
-    hero: {
-      tagline: 'वृन्दावन दर्शन',
-      subtitle: 'पवित्र धाम की यात्रा',
-      description:
-        'श्री वृन्दावन धाम — जहाँ साक्षात् भगवान श्री कृष्ण ने अपनी दिव्य लीलाएँ रचीं। यहाँ के प्रत्येक कण में कृष्ण-प्रेम की सुगंध है।',
-      exploreBtn: 'मंदिर दर्शन करें',
-      infoBtn: 'यात्रा जानकारी',
-    },
-    quickNav: {
-      title: 'दर्शन करें',
-      temples: 'मंदिर दर्शन',
-      templesDesc: 'प्राचीन, स्वयंभू व आधुनिक मंदिरों का दर्शन करें',
-      leelaSthals: 'लीला स्थल',
-      leelaSthalsDesc: 'भगवान की दिव्य लीलाओं के पवित्र स्थल',
-      visitorInfo: 'यात्री जानकारी',
-      visitorInfoDesc: 'कैसे पहुँचें, कब आएँ, क्या करें',
-      about: 'वृन्दावन परिचय',
-      aboutDesc: 'वृन्दावन धाम का महात्म्य और इतिहास',
-    },
-    disclaimer:
-      '⚠️ दर्शन समय त्योहारों और विशेष अवसरों पर बदल सकता है। कृपया स्थानीय स्तर पर सत्यापित करें।',
-
-    // Temple Categories
-    categories: {
-      all: 'सभी',
-      prachin: 'प्राचीन / स्वयंभू',
-      historical: 'ऐतिहासिक',
-      modern: 'आधुनिक',
-      leelaSthal: 'लीला स्थल',
-    },
-
-    // Temple Detail
-    templeDetail: {
-      timings: 'दर्शन समय',
-      summer: 'ग्रीष्म काल',
-      winter: 'शीत काल',
-      morning: 'प्रातः',
-      evening: 'सायं',
-      story: 'इतिहास / कथा',
-      special: 'विशेषता',
-      location: 'स्थान',
-      dosDonts: 'करें / न करें',
-      dos: 'करें',
-      donts: 'न करें',
-      backBtn: 'वापस जाएँ',
-      category: 'वर्ग',
-    },
-
-    // Temples Page
-    templesPage: {
-      title: 'मंदिर दर्शन',
-      subtitle: 'श्री वृन्दावन धाम के पावन मंदिरों के दर्शन करें',
-      searchPlaceholder: 'मंदिर खोजें...',
-      viewDetails: 'विस्तार देखें',
-      noResults: 'कोई मंदिर नहीं मिला',
-    },
-
-    // Leela Sthals Page
-    leelaSthalsPage: {
-      title: 'लीला स्थल',
-      subtitle: 'भगवान श्री कृष्ण की दिव्य लीलाओं के पावन स्थल',
-      viewDetails: 'विस्तार देखें',
-    },
-
-    // Visitor Info Page
-    visitorInfoPage: {
-      title: 'यात्री जानकारी',
-      subtitle: 'वृन्दावन यात्रा के लिए सम्पूर्ण मार्गदर्शन',
-      howToReach: 'कैसे पहुँचें',
-      bestTime: 'कब आएँ',
-      festivals: 'प्रमुख उत्सव',
-      dosDonts: 'करें / न करें',
-      localTips: 'स्थानीय सुझाव',
-      dos: 'करें',
-      donts: 'न करें',
-    },
-
-    // About Page
-    aboutPage: {
-      title: 'वृन्दावन धाम परिचय',
-      subtitle: 'पृथ्वी का सर्वोच्च तीर्थ — श्री वृन्दावन धाम',
-    },
-
-    // Footer
-    footer: {
-      dedication:
-        'श्री राधा-कृष्ण के श्री चरणों में समर्पित 🙏',
-      disclaimer:
-        'यह एप्लीकेशन केवल तीर्थयात्रियों की सहायता के लिए बनाई गई है। सभी जानकारी भक्ति भाव से प्रस्तुत की गई है।',
-      rights: '© 2024 वृन्दावन दर्शन। सर्वाधिकार सुरक्षित।',
-    },
+    appTitle: 'वृन्दावन दर्शन',
+    appSubtitle: 'Vrindavan Darshan',
+    navHome: 'होम',
+    navMandirs: 'मंदिर',
+    navLeelaSthals: 'लीला स्थल',
+    navInfo: 'जानकारी',
+    home_mandirs: 'मंदिर',
+    home_leelaSthals: 'लीला स्थल',
+    home_visitorInfo: 'यात्री जानकारी',
+    home_about: 'परिचय',
+    temples_title: 'वृन्दावन के मंदिर',
+    temples_searchPlaceholder: 'मंदिर खोजें...',
+    filter_all: 'सभी',
+    filter_prachin: 'प्राचीन',
+    filter_historical: 'ऐतिहासिक',
+    filter_modern: 'आधुनिक',
+    filter_leela: 'विशेष',
+    timing_morning: '☀️ ग्रीष्मकाल',
+    timing_winter: '❄️ शीतकाल',
+    timing_morning_label: 'प्रातः',
+    timing_evening_label: 'सायं',
+    story_title: 'कथा एवं इतिहास',
+    special_title: 'विशेषताएँ',
+    dos_title: 'करें',
+    donts_title: 'न करें',
+    category_prachin: 'प्राचीन / स्वयंभू',
+    category_historical: 'ऐतिहासिक',
+    category_modern: 'आधुनिक',
+    category_leela: 'लीला स्थल',
+    category_special: 'विशेष',
+    visitor_title: 'यात्री जानकारी',
+    visitor_howToReach: 'कैसे पहुँचें',
+    visitor_bestTime: 'सर्वोत्तम समय',
+    visitor_festivals: 'प्रमुख त्योहार',
+    visitor_dosDonts: 'करें और न करें',
+    visitor_tips: 'यात्रा सुझाव',
+    about_title: 'इस ऐप के बारे में',
+    about_version: 'संस्करण 1.0.0',
+    about_description: 'वृन्दावन दर्शन ऐप श्री राधा-कृष्ण की पावन भूमि वृन्दावन के मंदिरों, लीला स्थलों और तीर्थयात्रा की जानकारी प्रदान करता है। यह ऐप श्रद्धालुओं को वृन्दावन की दिव्य विरासत से जोड़ने के लिए बनाया गया है।',
+    about_disclaimer: 'इस ऐप में दी गई जानकारी शैक्षिक एवं आध्यात्मिक उद्देश्यों के लिए है। दर्शन समय त्योहारों और विशेष अवसरों पर परिवर्तित हो सकते हैं। कृपया मंदिर जाने से पहले वर्तमान समय की पुष्टि करें।',
+    leela_title: 'लीला स्थल',
+    lang_toggle: 'EN',
+    timing_disclaimer: 'समय त्योहारों के दौरान परिवर्तित हो सकता है। कृपया पहले से पुष्टि करें।',
   },
-
   en: {
-    // Header
-    appName: 'Vrindavan Darshan',
-    appSubtitle: 'Journey to the Sacred Abode',
-    nav: {
-      home: 'Home',
-      temples: 'Temples',
-      leelaSthals: 'Leela Sthals',
-      visitorInfo: 'Visitor Info',
-      about: 'About',
-    },
-    langToggle: 'हिन्दी',
-
-    // Home Page
-    hero: {
-      tagline: 'Vrindavan Darshan',
-      subtitle: 'Journey to the Sacred Abode',
-      description:
-        'Shri Vrindavan Dham — the sacred land where Bhagwan Shri Krishna performed His divine pastimes (Leelas). Every particle of this holy land is imbued with divine love.',
-      exploreBtn: 'Explore Temples',
-      infoBtn: 'Visitor Information',
-    },
-    quickNav: {
-      title: 'Begin Your Darshan',
-      temples: 'Temple Darshan',
-      templesDesc: 'Explore ancient, self-manifested & modern temples',
-      leelaSthals: 'Leela Sthals',
-      leelaSthalsDesc: 'Sacred places of Bhagwan\'s divine pastimes',
-      visitorInfo: 'Visitor Information',
-      visitorInfoDesc: 'How to reach, when to visit, what to do',
-      about: 'About Vrindavan',
-      aboutDesc: 'Significance and history of Shri Vrindavan Dham',
-    },
-    disclaimer:
-      '⚠️ Darshan timings may vary during festivals and special occasions. Please verify locally.',
-
-    // Temple Categories
-    categories: {
-      all: 'All',
-      prachin: 'Ancient / Swayambhu',
-      historical: 'Historical',
-      modern: 'Modern',
-      leelaSthal: 'Leela Sthal',
-    },
-
-    // Temple Detail
-    templeDetail: {
-      timings: 'Darshan Timings',
-      summer: 'Summer',
-      winter: 'Winter',
-      morning: 'Morning',
-      evening: 'Evening',
-      story: 'History / Sacred Story',
-      special: 'Special Features',
-      location: 'Location',
-      dosDonts: "Do's & Don'ts",
-      dos: "Do's",
-      donts: "Don'ts",
-      backBtn: 'Go Back',
-      category: 'Category',
-    },
-
-    // Temples Page
-    templesPage: {
-      title: 'Temple Darshan',
-      subtitle: 'Visit the sacred temples of Shri Vrindavan Dham',
-      searchPlaceholder: 'Search temples...',
-      viewDetails: 'View Details',
-      noResults: 'No temples found',
-    },
-
-    // Leela Sthals Page
-    leelaSthalsPage: {
-      title: 'Leela Sthals',
-      subtitle: 'Sacred places of Bhagwan Shri Krishna\'s divine pastimes',
-      viewDetails: 'View Details',
-    },
-
-    // Visitor Info Page
-    visitorInfoPage: {
-      title: 'Visitor Information',
-      subtitle: 'Complete guide for your Vrindavan pilgrimage',
-      howToReach: 'How to Reach',
-      bestTime: 'Best Time to Visit',
-      festivals: 'Major Festivals',
-      dosDonts: "Do's & Don'ts",
-      localTips: 'Local Tips',
-      dos: "Do's",
-      donts: "Don'ts",
-    },
-
-    // About Page
-    aboutPage: {
-      title: 'About Vrindavan Dham',
-      subtitle: 'The Supreme Pilgrimage — Shri Vrindavan Dham',
-    },
-
-    // Footer
-    footer: {
-      dedication:
-        'Dedicated at the lotus feet of Shri Radha-Krishna 🙏',
-      disclaimer:
-        'This application is created solely to assist pilgrims. All information is presented with devotion and reverence.',
-      rights: '© 2024 Vrindavan Darshan. All rights reserved.',
-    },
+    appTitle: 'वृन्दावन दर्शन',
+    appSubtitle: 'Vrindavan Darshan',
+    navHome: 'Home',
+    navMandirs: 'Mandirs',
+    navLeelaSthals: 'Leela Sthals',
+    navInfo: 'Info',
+    home_mandirs: 'Mandirs',
+    home_leelaSthals: 'Leela Sthals',
+    home_visitorInfo: 'Visitor Info',
+    home_about: 'About',
+    temples_title: 'Temples of Vrindavan',
+    temples_searchPlaceholder: 'Search temples...',
+    filter_all: 'All',
+    filter_prachin: 'Prachin',
+    filter_historical: 'Historical',
+    filter_modern: 'Modern',
+    filter_leela: 'Special',
+    timing_morning: '☀️ Summer',
+    timing_winter: '❄️ Winter',
+    timing_morning_label: 'Morning',
+    timing_evening_label: 'Evening',
+    story_title: 'Story & History',
+    special_title: 'Special Features',
+    dos_title: "Do's",
+    donts_title: "Don'ts",
+    category_prachin: 'Prachin / Swayambhu',
+    category_historical: 'Historical',
+    category_modern: 'Modern',
+    category_leela: 'Leela Sthal',
+    category_special: 'Special',
+    visitor_title: 'Visitor Information',
+    visitor_howToReach: 'How to Reach',
+    visitor_bestTime: 'Best Time to Visit',
+    visitor_festivals: 'Major Festivals',
+    visitor_dosDonts: "Do's & Don'ts",
+    visitor_tips: 'Travel Tips',
+    about_title: 'About This App',
+    about_version: 'Version 1.0.0',
+    about_description: 'Vrindavan Darshan is a devotional guide app for the sacred Dham of Shri Radha-Krishna. It provides information about temples, leela sthals, darshan timings, and pilgrimage tips to help devotees connect with the divine heritage of Vrindavan.',
+    about_disclaimer: 'The information provided in this app is for spiritual and educational purposes. Darshan timings may vary during festivals and special occasions. Please confirm current timings before visiting.',
+    leela_title: 'Leela Sthals',
+    lang_toggle: 'हि',
+    timing_disclaimer: 'Timings may vary during festivals. Please confirm in advance.',
   },
 };
-
-export default translations;

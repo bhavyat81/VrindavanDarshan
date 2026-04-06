@@ -1,183 +1,98 @@
-# 🪷 वृन्दावन दर्शन | Vrindavan Darshan
+# वृन्दावन दर्शन — Vrindavan Darshan
 
-> **वृन्दावन दर्शन — पवित्र धाम की यात्रा**
-> **Vrindavan Darshan — Journey to the Sacred Abode**
+A devotional React Native (Expo) app for exploring the sacred temples, leela sthals, and pilgrimage information of Vrindavan Dham.
 
-श्री राधा-कृष्ण के श्री चरणों में सादर समर्पित 🙏
-*Humbly dedicated at the lotus feet of Shri Radha-Krishna 🙏*
+## Features
 
----
+- 🕌 **Mandirs** — Browse temples of Vrindavan with category filters (Prachin, Historical, Modern, Special)
+- 🌿 **Leela Sthals** — Sacred places associated with Bhagwan Shri Krishna's divine pastimes
+- ℹ️ **Visitor Info** — How to reach, best time to visit, festivals, do's & don'ts, travel tips
+- 🌐 **Bilingual** — Full Hindi and English support with persistent language preference
 
-## 📖 About / परिचय
+## Tech Stack
 
-**Hindi:** यह एक सम्पूर्ण वृन्दावन दर्शन गाइड एप्लीकेशन है जो तीर्थयात्रियों को श्री वृन्दावन धाम के मंदिरों, लीला स्थलों और यात्रा जानकारी के बारे में मार्गदर्शन करती है। यह एप्लीकेशन हिन्दी और अंग्रेजी दोनों भाषाओं में उपलब्ध है।
+- **React Native** with **Expo** (~50.0.14)
+- **React Navigation** (bottom tabs + native stack)
+- **expo-linear-gradient** for UI gradients
+- **@react-native-async-storage/async-storage** for language persistence
+- **@expo/vector-icons** (Ionicons)
 
-**English:** This is a complete Vrindavan Darshan Guide app for pilgrims visiting Shri Vrindavan Dham. It provides information about temples, leela sthals (places of divine pastimes), darshan timings, sacred stories, and visitor guidance — all in both Hindi and English.
-
----
-
-## ✨ Features / विशेषताएँ
-
-| Feature | विवरण / Description |
-|---------|---------------------|
-| 🌐 **Bilingual** | Full Hindi & English with one-click language toggle |
-| 🛕 **Temple Directory** | 11+ mandirs with full details, stories, and timings |
-| 📿 **Categories** | Prachin/Swayambhu, Historical, Modern, Leela Sthals |
-| ⏰ **Darshan Timings** | Seasonal timings (Summer/Winter) for each temple |
-| 📖 **Sacred Stories** | Reverential narrations from authentic scriptures |
-| ℹ️ **Visitor Info** | How to reach, best time, festivals, do's & don'ts |
-| 📱 **Mobile-First** | Fully responsive design |
-| 🎨 **Spiritual Theme** | Saffron, maroon & gold — traditional devotional colors |
-
----
-
-## 🛕 Temples Included / सम्मिलित मंदिर
-
-### प्राचीन / स्वयंभू (Ancient / Swayambhu)
-- श्री बाँके बिहारी मंदिर | Shri Banke Bihari Mandir
-- श्री राधा वल्लभ मंदिर | Shri Radha Vallabh Mandir
-- श्री राधा रमण मंदिर | Shri Radha Raman Mandir *(Swayambhu)*
-- श्री गोविन्द देव मंदिर | Shri Govind Dev Mandir
-- श्री मदन मोहन मंदिर | Shri Madan Mohan Mandir
-- श्री राधा दामोदर मंदिर | Shri Radha Damodar Mandir
-
-### ऐतिहासिक (Historical)
-- श्री रंग जी मंदिर | Shri Rang Ji Mandir
-- शाहजी मंदिर | Shahji Mandir
-
-### आधुनिक (Modern)
-- ISKCON वृन्दावन | ISKCON Vrindavan
-- प्रेम मंदिर | Prem Mandir
-- निधिवन | Nidhivan
-
-### लीला स्थल (Leela Sthals)
-- सेवा कुञ्ज | Seva Kunj
-- केसी घाट | Kesi Ghat
-- विश्राम घाट (मथुरा) | Vishram Ghat (Mathura)
-- गोवर्धन पर्वत | Govardhan Hill (Giriraj)
-
----
-
-## 🚀 Getting Started / शुरुआत कैसे करें
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm 9+
 
-### Installation & Running Locally
+- Node.js 18+
+- Expo CLI: `npm install -g expo-cli`
+- For iOS: Xcode (macOS only)
+- For Android: Android Studio
+
+### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/bhavyat81/VrindavanDarshan.git
-cd VrindavanDarshan
-
-# Install dependencies
 npm install
-
-# Start development server
-npm run dev
 ```
 
-The app will be available at `http://localhost:5173`
-
-### Build for Production
+### Running the App
 
 ```bash
-npm run build
-npm run preview
+# Start Expo dev server
+npm start
+
+# Run on Android
+npm run android
+
+# Run on iOS
+npm run ios
+
+# Run on Web
+npm run web
 ```
 
----
+## Assets
 
-## 🛠️ Tech Stack
+Replace the placeholder files in `assets/` with actual images before building:
+- `icon.png` (1024×1024)
+- `splash.png` (1284×2778)
+- `adaptive-icon.png` (1024×1024)
+- `favicon.png` (48×48)
 
-| Technology | Purpose |
-|-----------|---------|
-| **React 18** | UI Framework |
-| **Vite 5** | Build tool & dev server |
-| **React Router 6** | Client-side navigation |
-| **CSS Custom Properties** | Theming & styling |
-| **Google Fonts** | Tiro Devanagari Hindi, Playfair Display, Lora |
-| **LocalStorage** | Language preference persistence |
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-src/
-  components/
-    Header.jsx          # Header with navigation & language toggle
-    Footer.jsx          # Footer with dedication
-    TempleCard.jsx      # Reusable temple/sthal card component
-    LanguageToggle.jsx  # Language switch button
-  pages/
-    Home.jsx            # Landing page with hero & quick nav
-    Temples.jsx         # Temple directory with search & filter
-    TempleDetailPage.jsx # Individual temple/sthal detail
-    LeelaSthals.jsx     # Leela Sthals listing
-    VisitorInfo.jsx     # Complete visitor guide
-    About.jsx           # About Vrindavan Dham
-  data/
-    temples.js          # All temple data (Hindi & English)
-    leelaSthals.js      # Leela Sthal data
-    visitorInfo.js      # Visitor information data
-  context/
-    LanguageContext.jsx # Language state & toggle
-  i18n/
-    translations.js     # UI strings in Hindi & English
-  App.jsx
-  main.jsx
-  index.css             # Global styles with spiritual theme
-  App.css
+├── App.js                        # Root component
+├── app.json                      # Expo configuration
+├── babel.config.js
+├── assets/                       # App icons & splash screen
+└── src/
+    ├── context/
+    │   └── LanguageContext.js    # Language state (hi/en)
+    ├── data/
+    │   ├── temples.js            # Temple data
+    │   ├── leelaSthals.js        # Leela Sthal data
+    │   └── visitorInfo.js        # Visitor information data
+    ├── i18n/
+    │   └── translations.js       # UI strings (hi + en)
+    ├── navigation/
+    │   └── AppNavigator.js       # Tab + Stack navigation
+    ├── screens/
+    │   ├── HomeScreen.js
+    │   ├── TemplesScreen.js
+    │   ├── TempleDetailScreen.js
+    │   ├── LeelaSthalsScreen.js
+    │   ├── VisitorInfoScreen.js
+    │   └── AboutScreen.js
+    ├── components/
+    │   ├── Header.js
+    │   ├── TempleCard.js
+    │   ├── CategoryFilter.js
+    │   ├── TimingCard.js
+    │   └── LanguageToggle.js
+    └── theme/
+        ├── colors.js
+        └── fonts.js
 ```
 
----
+## 🙏 Dedication
 
-## 🌐 Bilingual System
-
-- Default language: **Hindi** (हिन्दी) — as most visitors are Hindi-speaking
-- Click the language toggle (🌐 English / 🌐 हिन्दी) in the header to switch
-- Language preference is saved in `localStorage`
-- All content (temple stories, UI, etc.) is available in both languages
-
----
-
-## 🙏 Sensitivity & Respect Guidelines
-
-This app is created with the utmost respect and devotion for Shri Vrindavan Dham and its sacred traditions:
-
-- ✅ All content uses reverential terms: "भगवान" (Bhagwan), "ठाकुर जी" (Thakur Ji)
-- ✅ Self-manifested deities described as "प्रकट हुए" (prakat hue), never "बनाया गया"
-- ✅ Stories sourced from authentic scriptures (Shrimad Bhagavatam, Puranas, traditional accounts)
-- ✅ "श्री" (Shri) honorific used before all deity names
-- ✅ No commercial commentary, no casual or disrespectful tone
-- ✅ Miracles and divine events presented as sacred traditions
-
----
-
-## 📸 Screenshots
-
-*(Coming soon — add screenshots of the app here)*
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please ensure:
-1. All new content follows the sensitivity & respect guidelines above
-2. Temple information is sourced from authentic scriptures or well-established traditions
-3. Both Hindi and English content is provided for any new additions
-
----
-
-## ⚠️ Disclaimer / अस्वीकरण
-
-**Hindi:** दर्शन समय त्योहारों और विशेष अवसरों पर बदल सकते हैं। कृपया स्थानीय स्तर पर सत्यापित करें। यह एप्लीकेशन केवल मार्गदर्शन हेतु है।
-
-**English:** Darshan timings may vary during festivals and special occasions. Please verify locally. This application is for guidance purposes only.
-
----
-
-*🪷 राधे राधे | Radhe Radhe 🪷*
-
+This app is dedicated in devotion to Shri Radha-Krishna.  
+**जय श्री राधे।**
