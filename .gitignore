@@ -1,12 +1,12 @@
 # Dependencies
 node_modules/
 
-# Expo
-.expo/
-dist/
-web-build/
+# React Native
+.metro-health-check*
 
-# Native
+# iOS
+ios/Pods/
+ios/build/
 *.orig.*
 *.jks
 *.p8
@@ -14,8 +14,10 @@ web-build/
 *.key
 *.mobileprovision
 
-# Metro
-.metro-health-check*
+# Android
+android/app/build/
+android/.gradle/
+.gradle/
 
 # debug
 npm-debug.*
