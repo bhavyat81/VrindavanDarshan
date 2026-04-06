@@ -1,4 +1,4 @@
-const temples = [
+export const temples = [
   // ─────────────────────────────────────────────────
   // A. PRACHIN / SWAYAMBHU
   // ─────────────────────────────────────────────────
@@ -574,4 +574,3 @@ const temples = [
   },
 ];
 
-export default temples;

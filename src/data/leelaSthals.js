@@ -1,4 +1,4 @@
-const leelaSthals = [
+export const leelaSthals = [
   {
     id: 'seva-kunj',
     name: {
@@ -149,4 +149,3 @@ const leelaSthals = [
   },
 ];
 
-export default leelaSthals;
