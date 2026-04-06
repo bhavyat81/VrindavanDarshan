@@ -11,8 +11,8 @@ A devotional React Native app for exploring the sacred temples, leela sthals, an
 
 ## Tech Stack
 
-- **React Native 0.76.9** (plain CLI — no Expo)
-- **React Navigation v6** (bottom tabs + native stack)
+- **React Native 0.84.1** (plain CLI — no Expo)
+- **React Navigation v7** (bottom tabs + native stack)
 - **react-native-linear-gradient** for UI gradients
 - **react-native-vector-icons** (Ionicons)
 - **@react-native-async-storage/async-storage** for language persistence
@@ -26,12 +26,37 @@ A devotional React Native app for exploring the sacred temples, leela sthals, an
 - **Ruby 3.3+** (recommended via rbenv or rvm)
 - **Android Studio** (for Android build)
 
+## Setup
+
+```bash
+cd VrindavanDarshan
+npm install
+```
+
+## Generating Native Projects (first time only)
+
+If the `ios/` and `android/` folders are not present, generate them with the React Native CLI. The project **must** be initialised using React Native 0.84.1 (provided by `@react-native-community/cli` 20.x) so that the native templates match the JS dependencies:
+
+```bash
+cd ~
+npx @react-native-community/cli init VrindavanDarshan --directory TempVD
+cp -r ~/TempVD/ios ~/VrindavanDarshan/ios
+cp -r ~/TempVD/android ~/VrindavanDarshan/android
+rm -rf ~/TempVD
+```
+
+Then install iOS CocoaPods:
+
+```bash
+cd ~/VrindavanDarshan/ios
+pod install
+cd ..
+```
+
 ## Running on iOS
 
 ```bash
-npm install
-cd ios && pod install && cd ..
-npx react-native run-ios --device
+npx react-native run-ios
 ```
 
 Or open `ios/VrindavanDarshan.xcworkspace` in Xcode, select your iPhone as the target device, and click ▶️ **Run**.
@@ -41,28 +66,8 @@ Or open `ios/VrindavanDarshan.xcworkspace` in Xcode, select your iPhone as the t
 ## Running on Android
 
 ```bash
-npm install
 npx react-native run-android
 ```
-
-## Generating Native Projects (if ios/ or android/ are missing)
-
-If the `ios/` and `android/` folders are not present, generate them with:
-
-```bash
-npm install
-npx @react-native-community/cli init VrindavanDarshan --skip-install
-```
-
-Then copy the `src/`, `App.js`, `index.js`, and other source files into the new project.
-
-Alternatively, run:
-
-```bash
-npx react-native init VrindavanDarshan
-```
-
-And replace the generated source files with the files from this repository.
 
 ## Starting Metro Bundler
 
