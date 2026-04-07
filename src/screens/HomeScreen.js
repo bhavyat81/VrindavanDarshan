@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet, Dimensions,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';

@@ -1,4 +1,19 @@
 {
-  "name": "VrindavanDarshan",
-  "displayName": "Vrindavan Darshan"
+  "expo": {
+    "name": "VrindavanDarshan",
+    "slug": "VrindavanDarshan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vrindavandarshan.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#8B1A1A"
+      },
+      "package": "com.vrindavandarshan.app"
+    }
+  }
 }
