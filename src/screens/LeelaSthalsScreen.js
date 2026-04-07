@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View, Text, FlatList, TouchableOpacity, StyleSheet,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { leelaSthals } from '../data/leelaSthals';
@@ -22,18 +21,14 @@ function LeelaSthalCard({ item }) {
       >
         <View style={styles.cardTitleRow}>
           <Text style={styles.cardName}>{item.name[language]}</Text>
-          <Ionicons
-            name={expanded ? 'chevron-up' : 'chevron-down'}
-            size={20}
-            color={colors.accent}
-          />
+          <Text style={{fontSize: 18, color: colors.accent}}>{expanded ? '▲' : '▼'}</Text>
         </View>
         {item.deity && (
           <Text style={styles.cardDeity}>{item.deity[language]}</Text>
         )}
         {item.location && (
           <View style={styles.locationRow}>
-            <Ionicons name="location-outline" size={12} color={colors.textMuted} />
+            <Text style={{fontSize: 12}}>📍</Text>
             <Text style={styles.locationText}>{item.location[language]}</Text>
           </View>
         )}

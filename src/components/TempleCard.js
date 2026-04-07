@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { colors } from '../theme/colors';
 
@@ -46,7 +45,7 @@ export default function TempleCard({ temple, onPress }) {
         <View style={[styles.badge, { backgroundColor: badgeColor }]}>
           <Text style={styles.badgeText}>{categoryLabel}</Text>
         </View>
-        <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+        <Text style={{fontSize: 16, color: colors.textMuted}}>›</Text>
       </View>
       <Text style={styles.name}>{temple.name[language]}</Text>
       {temple.deity && (
@@ -57,13 +56,13 @@ export default function TempleCard({ temple, onPress }) {
       </Text>
       {getTimingPreview() ? (
         <View style={styles.timingRow}>
-          <Ionicons name="time-outline" size={13} color={colors.textMuted} />
+          <Text style={{fontSize: 12}}>🕐</Text>
           <Text style={styles.timingText}>{getTimingPreview()}</Text>
         </View>
       ) : null}
       {temple.location && (
         <View style={styles.locationRow}>
-          <Ionicons name="location-outline" size={13} color={colors.textMuted} />
+          <Text style={{fontSize: 12}}>📍</Text>
           <Text style={styles.locationText} numberOfLines={1}>{temple.location[language]}</Text>
         </View>
       )}

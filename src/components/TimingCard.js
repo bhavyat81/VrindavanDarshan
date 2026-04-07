@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { colors } from '../theme/colors';
@@ -23,7 +22,7 @@ export default function TimingCard({ timings }) {
   return (
     <View style={styles.card}>
       <View style={styles.titleRow}>
-        <Ionicons name="time" size={18} color={colors.accent} />
+        <Text style={{fontSize: 18}}>🕐</Text>
         <Text style={styles.title}>{language === 'hi' ? 'दर्शन समय' : 'Darshan Timings'}</Text>
       </View>
       {hasSeasonal ? (

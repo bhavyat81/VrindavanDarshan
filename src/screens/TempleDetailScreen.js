@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View, Text, ScrollView, StyleSheet,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { temples } from '../data/temples';
@@ -52,7 +51,7 @@ export default function TempleDetailScreen({ route }) {
         )}
         {temple.location && (
           <View style={styles.locationRow}>
-            <Ionicons name="location" size={14} color={colors.accent} />
+            <Text style={{fontSize: 14}}>📍</Text>
             <Text style={styles.locationText}>{temple.location[language]}</Text>
           </View>
         )}
