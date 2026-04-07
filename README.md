@@ -35,23 +35,29 @@ npm install
 
 ## Generating Native Projects (first time only)
 
-If the `ios/` and `android/` folders are not present, generate them with the React Native CLI. The project **must** be initialised using React Native 0.84.1 (provided by `@react-native-community/cli` 20.x) so that the native templates match the JS dependencies:
+If the `ios/` and `android/` folders are not present, generate them:
 
 ```bash
 cd ~
-npx @react-native-community/cli init VrindavanDarshan --directory TempVD
+npx @react-native-community/cli init VrindavanDarshan --directory TempVD --skip-install
 cp -r ~/TempVD/ios ~/VrindavanDarshan/ios
 cp -r ~/TempVD/android ~/VrindavanDarshan/android
 rm -rf ~/TempVD
 ```
 
-Then install iOS CocoaPods:
+> **Note:** `--skip-install` prevents `npm install` from running inside TempVD. Dependencies should be installed from `~/VrindavanDarshan` so that all native tool paths (hermesc, node, etc.) resolve relative to the correct project root.
+
+Then set up the iOS build environment and install pods:
 
 ```bash
-cd ~/VrindavanDarshan/ios
+cd ~/VrindavanDarshan
+echo 'export NODE_BINARY=$(command -v node)' > ios/.xcode.env.local
+cd ios
 pod install
 cd ..
 ```
+
+> **Important:** Always run `pod install` from `~/VrindavanDarshan/ios/`, never from TempVD. Running it from TempVD bakes in wrong absolute paths that cause `PhaseScriptExecution` build failures.
 
 ## Running on iOS
 

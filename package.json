@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "if [ -d ios ]; then echo 'export NODE_BINARY=$(command -v node)' > ios/.xcode.env.local; fi"
   },
   "dependencies": {
     "react": "19.0.0",
