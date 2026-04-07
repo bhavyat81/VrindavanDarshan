@@ -1,8 +1,8 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { colors } from '../theme/colors';
@@ -81,12 +81,12 @@ export default function AppNavigator() {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
-            else if (route.name === 'Mandirs') iconName = focused ? 'business' : 'business-outline';
-            else if (route.name === 'LeelaSthals') iconName = focused ? 'leaf' : 'leaf-outline';
-            else if (route.name === 'Info') iconName = focused ? 'information-circle' : 'information-circle-outline';
-            return <Ionicons name={iconName} size={size} color={color} />;
+            let emoji;
+            if (route.name === 'Home') emoji = '🏠';
+            else if (route.name === 'Mandirs') emoji = '🛕';
+            else if (route.name === 'LeelaSthals') emoji = '🍃';
+            else if (route.name === 'Info') emoji = 'ℹ️';
+            return <Text style={{ fontSize: 22 }}>{emoji}</Text>;
           },
           tabBarActiveTintColor: colors.secondary,
           tabBarInactiveTintColor: colors.tabBarInactive,

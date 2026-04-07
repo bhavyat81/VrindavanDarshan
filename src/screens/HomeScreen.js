@@ -3,7 +3,6 @@ import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet, Dimensions,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
@@ -13,10 +12,10 @@ import LanguageToggle from '../components/LanguageToggle';
 const { width } = Dimensions.get('window');
 
 const NAV_CARDS = [
-  { key: 'mandirs', icon: 'business', labelKey: 'home_mandirs', tab: 'Mandirs', color: '#FF6B35' },
-  { key: 'leela', icon: 'leaf', labelKey: 'home_leelaSthals', tab: 'LeelaSthals', color: '#6A1B9A' },
-  { key: 'info', icon: 'information-circle', labelKey: 'home_visitorInfo', tab: 'Info', color: '#1565C0' },
-  { key: 'about', icon: 'information', labelKey: 'home_about', tab: 'Info', screen: 'About', color: '#2E7D32' },
+  { key: 'mandirs', emoji: '🛕', labelKey: 'home_mandirs', tab: 'Mandirs', color: '#FF6B35' },
+  { key: 'leela', emoji: '🍃', labelKey: 'home_leelaSthals', tab: 'LeelaSthals', color: '#6A1B9A' },
+  { key: 'info', emoji: 'ℹ️', labelKey: 'home_visitorInfo', tab: 'Info', color: '#1565C0' },
+  { key: 'about', emoji: '📖', labelKey: 'home_about', tab: 'Info', screen: 'About', color: '#2E7D32' },
 ];
 
 export default function HomeScreen({ navigation }) {
@@ -39,7 +38,7 @@ export default function HomeScreen({ navigation }) {
       {/* Hero Section */}
       <LinearGradient
         colors={[colors.secondary, colors.primary, colors.accent]}
-        style={[styles.hero, { paddingTop: insets.top + 20 }]}
+        style={[styles.hero, { paddingTop: insets.top + 50 }]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
       >
@@ -69,7 +68,7 @@ export default function HomeScreen({ navigation }) {
               activeOpacity={0.85}
             >
               <View style={[styles.iconCircle, { backgroundColor: card.color + '20' }]}>
-                <Ionicons name={card.icon} size={30} color={card.color} />
+                <Text style={{ fontSize: 28 }}>{card.emoji}</Text>
               </View>
               <Text style={[styles.navCardLabel, { color: card.color }]}>
                 {t[card.labelKey]}

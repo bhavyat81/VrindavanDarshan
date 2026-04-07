@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { visitorInfo } from '../data/visitorInfo';
@@ -21,11 +20,7 @@ function Section({ title, icon, children }) {
           <Text style={styles.sectionIcon}>{icon}</Text>
           <Text style={styles.sectionTitle}>{title}</Text>
         </View>
-        <Ionicons
-          name={expanded ? 'chevron-up' : 'chevron-down'}
-          size={20}
-          color={colors.accent}
-        />
+        <Text style={{fontSize: 18, color: colors.accent}}>{expanded ? '▲' : '▼'}</Text>
       </TouchableOpacity>
       {expanded && <View style={styles.sectionBody}>{children}</View>}
     </View>
