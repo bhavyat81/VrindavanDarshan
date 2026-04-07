@@ -42,7 +42,7 @@ export default function TempleCard({ temple, onPress }) {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
       <View style={styles.header}>
-        <View style={[styles.badge, { backgroundColor: badgeColor }]}>
+        <View style={[styles.badge, { backgroundColor: badgeColor }]}>  
           <Text style={styles.badgeText}>{categoryLabel}</Text>
         </View>
         <Text style={{fontSize: 16, color: colors.textMuted}}>›</Text>
