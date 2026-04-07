@@ -7,4 +7,5 @@ module.exports = {
       sourceDir: './android',
     },
   },
+  assets: ['./node_modules/react-native-vector-icons/Fonts'],
 };

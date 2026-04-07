@@ -47,7 +47,7 @@ rm -rf ~/TempVD
 
 > **Note:** `--skip-install` prevents `npm install` from running inside TempVD. Dependencies should be installed from `~/VrindavanDarshan` so that all native tool paths (hermesc, node, etc.) resolve relative to the correct project root.
 
-Then set up the iOS build environment and install pods:
+Then set up the iOS build environment, install pods, and link font assets:
 
 ```bash
 cd ~/VrindavanDarshan
@@ -55,9 +55,12 @@ echo 'export NODE_BINARY=$(command -v node)' > ios/.xcode.env.local
 cd ios
 pod install
 cd ..
+npx react-native-asset
 ```
 
 > **Important:** Always run `pod install` from `~/VrindavanDarshan/ios/`, never from TempVD. Running it from TempVD bakes in wrong absolute paths that cause `PhaseScriptExecution` build failures.
+
+> **Note:** `npx react-native-asset` copies the Ionicons font files into `ios/` and registers them in `Info.plist` under `UIAppFonts`. Without this step, all Ionicons render as `?` question marks on iOS.
 
 ## Running on iOS
 
