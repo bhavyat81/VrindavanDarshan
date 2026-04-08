@@ -10,8 +10,8 @@ export default function TimingCard({ timings }) {
 
   if (!timings) return null;
 
-  const renderRow = (label, time) => (
-    <View style={styles.row} key={label}>
+  const renderRow = (label, time, keyPrefix) => (
+    <View style={styles.row} key={`${keyPrefix}-${label}`}> 
       <Text style={styles.label}>{label}</Text>
       <Text style={styles.time}>{time}</Text>
     </View>
@@ -26,21 +26,21 @@ export default function TimingCard({ timings }) {
         <Text style={styles.title}>{language === 'hi' ? 'दर्शन समय' : 'Darshan Timings'}</Text>
       </View>
       {hasSeasonal ? (
-        <>
+        <> 
           <Text style={styles.seasonTitle}>{t.timing_morning || '☀️ ग्रीष्मकाल'}</Text>
-          {timings.summer.morning && renderRow(t.timing_morning_label || 'Morning', timings.summer.morning)}
-          {timings.summer.evening && renderRow(t.timing_evening_label || 'Evening', timings.summer.evening)}
-          {timings.summer.aarti && renderRow('Aarti', timings.summer.aarti)}
+          {timings.summer.morning && renderRow(t.timing_morning_label || 'Morning', timings.summer.morning, 'summer')}
+          {timings.summer.evening && renderRow(t.timing_evening_label || 'Evening', timings.summer.evening, 'summer')}
+          {timings.summer.aarti && renderRow('Aarti', timings.summer.aarti, 'summer')}
           <Text style={styles.seasonTitle}>{t.timing_winter || '❄️ शीतकाल'}</Text>
-          {timings.winter.morning && renderRow(t.timing_morning_label || 'Morning', timings.winter.morning)}
-          {timings.winter.evening && renderRow(t.timing_evening_label || 'Evening', timings.winter.evening)}
-          {timings.winter.aarti && renderRow('Aarti', timings.winter.aarti)}
+          {timings.winter.morning && renderRow(t.timing_morning_label || 'Morning', timings.winter.morning, 'winter')}
+          {timings.winter.evening && renderRow(t.timing_evening_label || 'Evening', timings.winter.evening, 'winter')}
+          {timings.winter.aarti && renderRow('Aarti', timings.winter.aarti, 'winter')}
         </>
       ) : (
-        <>
-          {timings.morning && renderRow(t.timing_morning_label || 'Morning', timings.morning)}
-          {timings.evening && renderRow(t.timing_evening_label || 'Evening', timings.evening)}
-          {timings.aarti && renderRow('Aarti', timings.aarti)}
+        <> 
+          {timings.morning && renderRow(t.timing_morning_label || 'Morning', timings.morning, 'default')}
+          {timings.evening && renderRow(t.timing_evening_label || 'Evening', timings.evening, 'default')}
+          {timings.aarti && renderRow('Aarti', timings.aarti, 'default')}
           {timings.note && (
             <Text style={styles.note}>
               {typeof timings.note === 'object' ? timings.note[language] : timings.note}
