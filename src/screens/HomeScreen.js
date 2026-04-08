@@ -86,7 +86,7 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.welcomeText}>
           {language === 'hi'
             ? 'वृन्दावन — जहाँ भगवान श्री कृष्ण ने अपनी दिव्य लीलाएँ की थीं। यहाँ के प्रत्येक कण में राधा-कृष्ण का वास है।'
-            : 'Vrindavan — the sacred land where Bhagwan Shri Krishna performed His divine pastimes. Every particle of this holy Dham is infused with the presence of Radha-Krishna.'}
+            : 'Vrindavan — the sacred land where Bhagwan Shri Krishna performed His divine leelas. Every particle of this holy Dham is infused with the presence of Radha-Krishna.'}
         </Text>
       </View>
     </ScrollView>
