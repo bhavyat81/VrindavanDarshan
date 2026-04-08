@@ -1,1 +1,23 @@
-{\n  "expo": {\n    "name": "VrindavanDarshan",\n    "slug": "VrindavanDarshan",\n    "version": "1.0.1",\n    "orientation": "portrait",\n    "userInterfaceStyle": "light",\n    "icon": "./assets/icon.png",\n    "splash": {\n      "backgroundColor": "#8B1A1A"\n    },\n    "ios": {\n      "supportsTablet": true,\n      "bundleIdentifier": "com.vrindavandarshan.app",\n      "buildNumber": "1"\n    },\n    "android": {\n      "adaptiveIcon": {\n        "backgroundColor": "#8B1A1A"\n      },\n      "package": "com.vrindavandarshan.app"\n    }\n  }\n}
+{
+  "expo": {
+    "name": "VrindavanDarshan",
+    "slug": "VrindavanDarshan",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#8B1A1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vrindavandarshan.app",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#8B1A1A"
+      },
+      "package": "com.vrindavandarshan.app"
+    }
+  }
+}
