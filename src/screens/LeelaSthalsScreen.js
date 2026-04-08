@@ -74,7 +74,7 @@ export default function LeelaSthalsScreen() {
             <Text style={styles.headerText}>
               {language === 'hi'
                 ? 'भगवान श्री कृष्ण की दिव्य लीलाओं से जुड़े पावन स्थल'
-                : 'Sacred places associated with the divine pastimes of Bhagwan Shri Krishna'}
+                : 'Sacred places associated with the divine leelas of Bhagwan Shri Krishna'}
             </Text>
           </View>
         }

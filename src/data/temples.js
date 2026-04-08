@@ -492,7 +492,7 @@ export const temples = [
     },
     story: {
       hi: 'प्रेम मंदिर का निर्माण जगद्गुरु श्री कृपालु जी महाराज की प्रेरणा से हुआ और यह सन् 2012 में श्रद्धालुओं के लिए खुला। यह मंदिर इटालियन श्वेत संगमरमर से निर्मित है। मंदिर की दीवारों पर भगवान श्री कृष्ण और श्री राम की दिव्य लीलाओं के दृश्य पत्थर पर उकेरे गए हैं। रात में मंदिर का प्रकाश-प्रदर्शन (Light Show) अत्यन्त दर्शनीय और मनोहारी होता है।',
-      en: 'Prem Mandir was built under the divine inspiration of Jagadguru Shri Kripalu Ji Maharaj and opened its doors to devotees in 2012. It is crafted entirely from Italian white marble. The walls of the temple are adorned with beautifully carved panels depicting the divine leelas (pastimes) of Bhagwan Shri Krishna and Shri Ram. The nightly illumination and light show is a breathtakingly beautiful and devotional experience.',
+      en: 'Prem Mandir was built under the divine inspiration of Jagadguru Shri Kripalu Ji Maharaj and opened its doors to devotees in 2012. It is crafted entirely from Italian white marble. The walls of the temple are adorned with beautifully carved panels depicting the divine leelas of Bhagwan Shri Krishna and Shri Ram. The nightly illumination and light show is a breathtakingly beautiful and devotional experience.',
     },
     special: {
       hi: [
@@ -520,57 +520,5 @@ export const temples = [
     },
   },
 
-  {
-    id: 'nidhivan',
-    category: 'modern',
-    image: null,
-    name: {
-      hi: 'निधिवन',
-      en: 'Nidhivan',
-    },
-    deity: {
-      hi: 'श्री राधा-कृष्ण (रासलीला स्थल)',
-      en: 'Shri Radha-Krishna (sacred site of Raas Leela)',
-    },
-    location: {
-      hi: 'वृन्दावन, उत्तर प्रदेश',
-      en: 'Vrindavan, Uttar Pradesh',
-    },
-    timings: {
-      morning: '6:00 AM – 5:00 PM',
-      note: {
-        hi: 'सायंकाल के बाद प्रवेश वर्जित है',
-        en: 'Entry is strictly prohibited after evening',
-      },
-    },
-    story: {
-      hi: 'निधिवन वृन्दावन का अत्यन्त रहस्यमय और पवित्र वन है। ऐसी परम्परा है कि यहाँ प्रतिरात्रि भगवान श्री कृष्ण स्वयं रासलीला करते हैं। इस वन के वृक्ष रात में जोड़े में झुक जाते हैं और प्रातः फिर सीधे हो जाते हैं। ऐसी मान्यता है कि ये वृक्ष वे गोपियाँ हैं जो रासलीला में भाग लेती हैं। प्रतिरात्रि सायं की आरती के बाद यहाँ पान, मिष्ठान्न और श्रृंगार की सामग्री ठाकुर जी के लिए रखी जाती है, और प्रातः वह सब ग्रहण की हुई मिलती है। स्वामी हरिदास जी ने यहाँ अपनी साधना की थी और उन्हें यहीं बाँके बिहारी जी के दर्शन हुए थे।',
-      en: 'Nidhivan is the most mysterious and sacred grove of Vrindavan. The sacred tradition holds that every night, Bhagwan Shri Krishna Himself performs the divine Raas Leela in this grove. The trees here bend in pairs at night and straighten again by morning. The devout belief is that these trees are the Gopis (divine companions of Krishna) who participate in the Raas Leela. Every night after evening aarti, paan (betel leaves), sweets, and shringar (offerings) are kept for Thakur Ji — and by morning, all are found to have been received. It was here that Swami Haridas Ji performed his devotional sadhana and received the divine darshan of Shri Banke Bihari Ji.',
-    },
-    special: {
-      hi: [
-        'नित्य रासलीला की पावन परम्परा',
-        'सायंकाल के बाद प्रवेश वर्जित — सभी जीव-जंतु भी रात्रि में बाहर चले जाते हैं',
-        'प्रतिरात्रि ठाकुर जी के लिए श्रृंगार सामग्री रखी जाती है',
-        'स्वामी हरिदास जी की साधना-भूमि',
-      ],
-      en: [
-        'Sacred tradition of nightly Raas Leela',
-        'Entry strictly prohibited after evening — all creatures also leave at night',
-        'Shringar (offerings) kept for Thakur Ji every night',
-        'Sacred sadhana-bhoomi of Swami Haridas Ji',
-      ],
-    },
-    dosDonts: {
-      dos: {
-        hi: ['श्रद्धा और विनम्रता से दर्शन करें', 'वन की पवित्रता का सम्मान करें'],
-        en: ['Observe darshan with humility and reverence', 'Respect the sanctity of the sacred grove'],
-      },
-      donts: {
-        hi: ['सायंकाल के बाद किसी भी स्थिति में प्रवेश न करें', 'वन में किसी चीज को क्षति न पहुँचाएँ'],
-        en: ['Never enter after evening under any circumstances', 'Do not cause any harm to the sacred grove'],
-      },
-    },
-  },
 ];
 

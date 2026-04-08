@@ -111,6 +111,47 @@ export const leelaSthals = [
   },
 
   {
+    id: 'nidhivan',
+    name: {
+      hi: 'निधिवन',
+      en: 'Nidhivan',
+    },
+    deity: {
+      hi: 'श्री राधा-कृष्ण (रासलीला स्थल)',
+      en: 'Shri Radha-Krishna (sacred site of Raas Leela)',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '6:00 AM – 5:00 PM',
+      note: {
+        hi: 'सायंकाल के बाद प्रवेश वर्जित है',
+        en: 'Entry is strictly prohibited after evening',
+      },
+    },
+    story: {
+      hi: 'निधिवन वृन्दावन का अत्यन्त रहस्यमय और पवित्र वन है। ऐसी परम्परा है कि यहाँ प्रतिरात्रि भगवान श्री कृष्ण स्वयं रासलीला करते हैं। इस वन के वृक्ष रात में जोड़े में झुक जाते हैं और प्रातः फिर सीधे हो जाते हैं। ऐसी मान्यता है कि ये वृक्ष वे गोपियाँ हैं जो रासलीला में भाग लेती हैं। प्रतिरात्रि सायं की आरती के बाद यहाँ पान, मिष्ठान्न और श्रृंगार की सामग्री ठाकुर जी के लिए रखी जाती है, और प्रातः वह सब ग्रहण की हुई मिलती है। स्वामी हरिदास जी ने यहाँ अपनी साधना की थी और उन्हें यहीं बाँके बिहारी जी के दर्शन हुए थे।',
+      en: 'Nidhivan is the most mysterious and sacred grove of Vrindavan. The sacred tradition holds that every night, Bhagwan Shri Krishna Himself performs the divine Raas Leela in this grove. The trees here bend in pairs at night and straighten again by morning. The devout belief is that these trees are the Gopis (divine companions of Krishna) who participate in the Raas Leela. Every night after evening aarti, paan (betel leaves), sweets, and shringar (offerings) are kept for Thakur Ji — and by morning, all are found to have been received. It was here that Swami Haridas Ji performed his devotional sadhana and received the divine darshan of Shri Banke Bihari Ji.',
+    },
+    special: {
+      hi: [
+        'नित्य रासलीला की पावन परम्परा',
+        'सायंकाल के बाद प्रवेश वर्जित — सभी जीव-जंतु भी रात्रि में बाहर चले जाते हैं',
+        'प्रतिरात्रि ठाकुर जी के लिए श्रृंगार सामग्री रखी जाती है',
+        'स्वामी हरिदास जी की साधना-भूमि',
+      ],
+      en: [
+        'Sacred tradition of nightly Raas Leela',
+        'Entry strictly prohibited after evening — all creatures also leave at night',
+        'Shringar (offerings) kept for Thakur Ji every night',
+        'Sacred sadhana-bhoomi of Swami Haridas Ji',
+      ],
+    },
+  },
+
+  {
     id: 'govardhan',
     name: {
       hi: 'गोवर्धन पर्वत',
