@@ -21,6 +21,29 @@ const CATEGORY_LABELS = {
   en: { prachin: 'Prachin', historical: 'Historical', modern: 'Modern', leela: 'Leela Sthal', special: 'Special' },
 };
 
+const CATEGORY_EMOJIS = {
+  prachin: '🏛',
+  historical: '📜',
+  modern: '🏗',
+  special: '✨',
+  leela: '🍃',
+};
+
+function OrnamentDivider({ color }) {
+  return (
+    <View style={divStyles.row}>
+      <View style={[divStyles.line, { backgroundColor: color || colors.border }]} />
+      <Text style={[divStyles.star, { color: color || colors.accent }]}>✦</Text>
+      <View style={[divStyles.line, { backgroundColor: color || colors.border }]} />
+    </View>
+  );
+}
+const divStyles = StyleSheet.create({
+  row: { flexDirection: 'row', alignItems: 'center', marginVertical: 10 },
+  line: { flex: 1, height: 1 },
+  star: { fontSize: 12, marginHorizontal: 8 },
+});
+
 export default function TempleDetailScreen({ route }) {
   const { templeId } = route.params;
   const { language } = useLanguage();
@@ -37,25 +60,32 @@ export default function TempleDetailScreen({ route }) {
 
   const badgeColor = CATEGORY_COLORS[temple.category] || colors.primary;
   const categoryLabel = CATEGORY_LABELS[language][temple.category];
+  const categoryEmoji = CATEGORY_EMOJIS[temple.category] || '🛕';
 
   return (
     <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
+      {/* Decorative header banner */}
+      <View style={[styles.headerBanner, { backgroundColor: badgeColor }]}>
+        <Text style={styles.headerBannerEmoji}>{categoryEmoji}</Text>
+      </View>
+
       {/* Title Section */}
       <View style={styles.titleSection}>
         <View style={[styles.badge, { backgroundColor: badgeColor }]}>
           <Text style={styles.badgeText}>{categoryLabel}</Text>
         </View>
+        <OrnamentDivider color={colors.accent} />
         <Text style={styles.templeName}>{temple.name[language]}</Text>
         {temple.deity && (
           <Text style={styles.deityName}>{temple.deity[language]}</Text>
         )}
+        <OrnamentDivider color={'rgba(218,165,32,0.4)'} />
         {temple.location && (
           <View style={styles.locationRow}>
-            <Text style={{fontSize: 14}}>📍</Text>
+            <Text style={styles.locationIcon}>📍</Text>
             <Text style={styles.locationText}>{temple.location[language]}</Text>
           </View>
         )}
-        {/* Both languages name */}
         <Text style={styles.altName}>
           {language === 'hi' ? temple.name.en : temple.name.hi}
         </Text>
@@ -70,6 +100,7 @@ export default function TempleDetailScreen({ route }) {
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>📖 {t.story_title}</Text>
           </View>
+          <OrnamentDivider color={colors.border} />
           <Text style={styles.storyText}>{temple.story[language]}</Text>
         </View>
 
@@ -79,6 +110,7 @@ export default function TempleDetailScreen({ route }) {
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionTitle}>✨ {t.special_title}</Text>
             </View>
+            <OrnamentDivider color={colors.border} />
             {temple.special[language].map((item, i) => (
               <View key={i} style={styles.bulletRow}>
                 <Text style={styles.bullet}>•</Text>
@@ -96,6 +128,7 @@ export default function TempleDetailScreen({ route }) {
                 <View style={styles.sectionHeader}>
                   <Text style={[styles.sectionTitle, { color: '#2E7D32' }]}>✅ {t.dos_title}</Text>
                 </View>
+                <OrnamentDivider color={'#C8E6C9'} />
                 {temple.dosDonts.dos[language].map((item, i) => (
                   <View key={i} style={styles.bulletRow}>
                     <Text style={[styles.bullet, { color: '#2E7D32' }]}>✓</Text>
@@ -106,9 +139,10 @@ export default function TempleDetailScreen({ route }) {
             )}
             {temple.dosDonts.donts && (
               <>
-                <View style={[styles.sectionHeader, { marginTop: 12 }]}>
+                <View style={[styles.sectionHeader, { marginTop: 14 }]}>
                   <Text style={[styles.sectionTitle, { color: '#C62828' }]}>⛔ {t.donts_title}</Text>
                 </View>
+                <OrnamentDivider color={'#FFCDD2'} />
                 {temple.dosDonts.donts[language].map((item, i) => (
                   <View key={i} style={styles.bulletRow}>
                     <Text style={[styles.bullet, { color: '#C62828' }]}>✗</Text>
@@ -133,6 +167,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
+  headerBanner: {
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerBannerEmoji: {
+    fontSize: 30,
+  },
   titleSection: {
     backgroundColor: colors.secondary,
     padding: 20,
@@ -143,7 +185,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 4,
     borderRadius: 12,
-    marginBottom: 10,
+    marginBottom: 4,
   },
   badgeText: {
     color: colors.white,
@@ -151,52 +193,55 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   templeName: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: '800',
     color: colors.white,
     marginBottom: 4,
+    lineHeight: 34,
   },
   deityName: {
     fontSize: 15,
     color: colors.accent,
     fontWeight: '600',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   altName: {
     fontSize: 13,
-    color: 'rgba(255,255,255,0.65)',
+    color: 'rgba(255,255,255,0.6)',
     fontStyle: 'italic',
-    marginTop: 6,
+    marginTop: 4,
   },
   locationRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    marginBottom: 4,
+  },
+  locationIcon: {
+    fontSize: 14,
+    marginRight: 6,
   },
   locationText: {
     fontSize: 13,
     color: 'rgba(255,255,255,0.85)',
-    marginLeft: 4,
   },
   content: {
     padding: 16,
   },
   section: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.surfaceElevated,
     borderRadius: 14,
     padding: 16,
     marginVertical: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.07,
     shadowRadius: 4,
     elevation: 2,
+    borderLeftWidth: 4,
+    borderLeftColor: colors.decorativeBorder,
   },
   sectionHeader: {
-    marginBottom: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-    paddingBottom: 8,
+    marginBottom: 2,
   },
   sectionTitle: {
     fontSize: 16,
@@ -206,7 +251,8 @@ const styles = StyleSheet.create({
   storyText: {
     fontSize: 14,
     color: colors.text,
-    lineHeight: 24,
+    lineHeight: 26,
+    paddingLeft: 4,
   },
   bulletRow: {
     flexDirection: 'row',

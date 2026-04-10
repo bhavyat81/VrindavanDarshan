@@ -2,16 +2,17 @@
   "expo": {
     "name": "VrindavanDarshan",
     "slug": "VrindavanDarshan",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "backgroundColor": "#8B1A1A"
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.vrindavandarshan.app",
-      "buildNumber": "1"
+      "buildNumber": "4"
     },
     "android": {
       "adaptiveIcon": {
