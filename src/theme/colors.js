@@ -19,4 +19,8 @@ export const colors = {
   gradientStart: '#FF6B35',
   gradientEnd: '#DAA520',
   sectionHeader: '#8B1A1A',
+  headerGradientTop: '#6B0F0F',
+  decorativeBorder: '#DAA520',
+  cardShadow: '#00000015',
+  surfaceElevated: '#FFFAF0',
 };

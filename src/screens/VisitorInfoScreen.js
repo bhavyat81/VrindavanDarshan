@@ -7,22 +7,37 @@ import { translations } from '../i18n/translations';
 import { visitorInfo } from '../data/visitorInfo';
 import { colors } from '../theme/colors';
 
-function Section({ title, icon, children }) {
+const SECTION_ACCENT_COLORS = {
+  howToReach: '#1565C0',
+  bestTime: '#2E7D32',
+  festivals: '#AD1457',
+  dosDonts: '#FF6B35',
+  localTips: '#6A1B9A',
+};
+
+function Section({ title, icon, accentColor, children }) {
   const [expanded, setExpanded] = useState(false);
   return (
-    <View style={styles.section}>
+    <View style={[styles.section, { borderLeftColor: accentColor }]}>
       <TouchableOpacity
         style={styles.sectionHeader}
         onPress={() => setExpanded(!expanded)}
         activeOpacity={0.85}
       >
         <View style={styles.sectionTitleRow}>
-          <Text style={styles.sectionIcon}>{icon}</Text>
-          <Text style={styles.sectionTitle}>{title}</Text>
+          <View style={[styles.iconBadge, { backgroundColor: accentColor + '18' }]}>
+            <Text style={styles.sectionIcon}>{icon}</Text>
+          </View>
+          <Text style={[styles.sectionTitle, { color: accentColor }]}>{title}</Text>
         </View>
-        <Text style={{fontSize: 18, color: colors.accent}}>{expanded ? '▲' : '▼'}</Text>
+        <Text style={[styles.chevron, { color: accentColor }]}>{expanded ? '▲' : '▼'}</Text>
       </TouchableOpacity>
-      {expanded && <View style={styles.sectionBody}>{children}</View>}
+      {expanded && (
+        <View style={styles.sectionBody}>
+          <View style={styles.sectionBodyDivider} />
+          {children}
+        </View>
+      )}
     </View>
   );
 }
@@ -87,7 +102,6 @@ export default function VisitorInfoScreen() {
     const langData = sectionData[language] || sectionData;
     if (!langData) return null;
 
-    // Handle howToReach with sections array
     if (key === 'howToReach' && langData.sections) {
       return langData.sections.map((s, i) => (
         <View key={i} style={styles.subSection}>
@@ -97,7 +111,6 @@ export default function VisitorInfoScreen() {
       ));
     }
 
-    // Handle bestTime with content + seasons
     if (key === 'bestTime') {
       return (
         <View>
@@ -115,7 +128,6 @@ export default function VisitorInfoScreen() {
       );
     }
 
-    // Handle festivals with list array
     if (key === 'festivals' && langData.list) {
       return langData.list.map((fest, i) => (
         <View key={i} style={styles.festivalRow}>
@@ -128,7 +140,6 @@ export default function VisitorInfoScreen() {
       ));
     }
 
-    // Handle dosDonts with dos/donts arrays
     if (key === 'dosDonts') {
       return (
         <View>
@@ -162,7 +173,6 @@ export default function VisitorInfoScreen() {
       );
     }
 
-    // Handle localTips with tips array
     if (key === 'localTips' && langData.tips) {
       return langData.tips.map((tip, i) => (
         <View key={i} style={styles.bulletRow}>
@@ -178,6 +188,7 @@ export default function VisitorInfoScreen() {
   return (
     <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
       <View style={styles.introCard}>
+        <Text style={styles.introEmoji}>🙏</Text>
         <Text style={styles.introText}>
           {language === 'hi'
             ? 'वृन्दावन आने वाले श्रद्धालुओं के लिए आवश्यक जानकारी'
@@ -188,8 +199,9 @@ export default function VisitorInfoScreen() {
       {Object.entries(visitorInfo).map(([key, sectionData]) => {
         const title = SECTION_TITLES[language][key] || key;
         const icon = SECTION_ICONS[key] || 'ℹ️';
+        const accentColor = SECTION_ACCENT_COLORS[key] || colors.secondary;
         return (
-          <Section key={key} title={title} icon={icon}>
+          <Section key={key} title={title} icon={icon} accentColor={accentColor}>
             {renderSectionContent(key, sectionData)}
           </Section>
         );
@@ -205,22 +217,31 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   introCard: {
-    backgroundColor: '#E8F5E9',
-    borderRadius: 12,
-    padding: 14,
+    backgroundColor: colors.secondary,
+    borderRadius: 16,
+    padding: 16,
     marginBottom: 16,
-    borderLeftWidth: 4,
-    borderLeftColor: '#2E7D32',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 4,
+  },
+  introEmoji: {
+    fontSize: 28,
+    marginBottom: 8,
   },
   introText: {
     fontSize: 13,
-    color: '#2E7D32',
+    color: 'rgba(255,255,255,0.9)',
     fontStyle: 'italic',
     textAlign: 'center',
     fontWeight: '500',
+    lineHeight: 20,
   },
   section: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.surfaceElevated,
     borderRadius: 14,
     marginBottom: 12,
     shadowColor: '#000',
@@ -229,33 +250,45 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
     overflow: 'hidden',
+    borderLeftWidth: 5,
   },
   sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
-    backgroundColor: colors.white,
+    padding: 14,
   },
   sectionTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
     flex: 1,
   },
+  iconBadge: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+  },
   sectionIcon: {
     fontSize: 18,
-    marginRight: 10,
   },
   sectionTitle: {
     fontSize: 15,
     fontWeight: '700',
-    color: colors.secondary,
+  },
+  chevron: {
+    fontSize: 14,
   },
   sectionBody: {
-    padding: 16,
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
+    paddingHorizontal: 16,
+    paddingBottom: 16,
+  },
+  sectionBodyDivider: {
+    height: 1,
+    backgroundColor: colors.border,
+    marginBottom: 12,
   },
   bodyText: {
     fontSize: 13,

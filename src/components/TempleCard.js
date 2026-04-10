@@ -11,6 +11,14 @@ const CATEGORY_COLORS = {
   special: colors.leelaBadge,
 };
 
+const CATEGORY_EMOJIS = {
+  prachin: '🏛',
+  historical: '📜',
+  modern: '🏗',
+  special: '✨',
+  leela: '🍃',
+};
+
 const CATEGORY_LABELS = {
   hi: {
     prachin: 'प्राचीन',
@@ -32,6 +40,7 @@ export default function TempleCard({ temple, onPress }) {
   const { language } = useLanguage();
   const badgeColor = CATEGORY_COLORS[temple.category] || colors.primary;
   const categoryLabel = CATEGORY_LABELS[language][temple.category] || temple.category;
+  const categoryEmoji = CATEGORY_EMOJIS[temple.category] || '🛕';
 
   const getTimingPreview = () => {
     if (temple.timings?.summer?.morning) return temple.timings.summer.morning;
@@ -41,31 +50,39 @@ export default function TempleCard({ temple, onPress }) {
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
-      <View style={styles.header}>
-        <View style={[styles.badge, { backgroundColor: badgeColor }]}>  
+      {/* Colored top banner strip */}
+      <View style={[styles.cardBanner, { backgroundColor: badgeColor }]}>
+        <Text style={styles.bannerEmoji}>{categoryEmoji}</Text>
+        <View style={[styles.badge]}>
           <Text style={styles.badgeText}>{categoryLabel}</Text>
         </View>
-        <Text style={{fontSize: 16, color: colors.textMuted}}>›</Text>
       </View>
-      <Text style={styles.name}>{temple.name[language]}</Text>
-      {temple.deity && (
-        <Text style={styles.deity}>{temple.deity[language]}</Text>
-      )}
-      <Text style={styles.story} numberOfLines={2}>
-        {temple.story[language]}
-      </Text>
-      {getTimingPreview() ? (
-        <View style={styles.timingRow}>
-          <Text style={{fontSize: 12}}>🕐</Text>
-          <Text style={styles.timingText}>{getTimingPreview()}</Text>
+      <View style={styles.cardBody}>
+        <Text style={styles.name}>{temple.name[language]}</Text>
+        {temple.deity && (
+          <Text style={styles.deity}>{temple.deity[language]}</Text>
+        )}
+        <Text style={styles.story} numberOfLines={2}>
+          {temple.story[language]}
+        </Text>
+        <View style={styles.footerRow}>
+          <View style={styles.metaRow}>
+            {getTimingPreview() ? (
+              <View style={styles.infoChip}>
+                <Text style={styles.infoChipText}>🕐 {getTimingPreview()}</Text>
+              </View>
+            ) : null}
+            {temple.location && (
+              <View style={styles.infoChip}>
+                <Text style={styles.infoChipText} numberOfLines={1}>📍 {temple.location[language]}</Text>
+              </View>
+            )}
+          </View>
+          <Text style={[styles.viewDetails, { color: badgeColor }]}>
+            {language === 'hi' ? 'विवरण देखें →' : 'View Details →'}
+          </Text>
         </View>
-      ) : null}
-      {temple.location && (
-        <View style={styles.locationRow}>
-          <Text style={{fontSize: 12}}>📍</Text>
-          <Text style={styles.locationText} numberOfLines={1}>{temple.location[language]}</Text>
-        </View>
-      )}
+      </View>
     </TouchableOpacity>
   );
 }
@@ -73,25 +90,28 @@ export default function TempleCard({ temple, onPress }) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.cardBackground,
-    borderRadius: 14,
-    padding: 16,
+    borderRadius: 16,
     marginHorizontal: 16,
     marginVertical: 8,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
-    elevation: 3,
-    borderLeftWidth: 4,
-    borderLeftColor: colors.primary,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    elevation: 4,
+    overflow: 'hidden',
   },
-  header: {
+  cardBanner: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    gap: 8,
+  },
+  bannerEmoji: {
+    fontSize: 20,
   },
   badge: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
     paddingHorizontal: 10,
     paddingVertical: 3,
     borderRadius: 12,
@@ -100,6 +120,9 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 11,
     fontWeight: '700',
+  },
+  cardBody: {
+    padding: 14,
   },
   name: {
     fontSize: 17,
@@ -116,28 +139,33 @@ const styles = StyleSheet.create({
   story: {
     fontSize: 13,
     color: colors.textLight,
-    lineHeight: 19,
-    marginBottom: 8,
+    lineHeight: 20,
+    marginBottom: 10,
   },
-  timingRow: {
+  footerRow: {
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+    paddingTop: 10,
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    marginBottom: 3,
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
   },
-  timingText: {
-    fontSize: 12,
-    color: colors.textMuted,
-    marginLeft: 4,
-  },
-  locationRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  locationText: {
-    fontSize: 12,
-    color: colors.textMuted,
-    marginLeft: 4,
+  metaRow: {
     flex: 1,
+    gap: 4,
+  },
+  infoChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 2,
+  },
+  infoChipText: {
+    fontSize: 11,
+    color: colors.textMuted,
+  },
+  viewDetails: {
+    fontSize: 12,
+    fontWeight: '700',
+    marginLeft: 8,
   },
 });
