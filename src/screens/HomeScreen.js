@@ -37,7 +37,7 @@ export default function HomeScreen({ navigation }) {
       {/* Hero Section — plain maroon View */}
       <View style={[styles.hero, { paddingTop: insets.top + 24 }]}>
         {/* Dark overlay strip for depth */}
-        <View style={styles.heroOverlay} />
+        <View style={styles.heroOverlay} accessible={false} />
         <View style={styles.heroTop}>
           <View style={styles.heroOm}>
             <Text style={styles.omText}>🕉</Text>
