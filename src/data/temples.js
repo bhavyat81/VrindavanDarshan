@@ -417,6 +417,524 @@ export const temples = [
     },
   },
 
+  {
+    id: 'gopinath',
+    category: 'prachin',
+    image: null,
+    name: {
+      hi: 'गोपीनाथ मंदिर',
+      en: 'Gopinath Mandir',
+    },
+    deity: {
+      hi: 'श्री गोपीनाथ जी',
+      en: 'Shri Gopinath Ji',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '8:00 AM – 12:00 PM',
+      evening: '5:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'गोपीनाथ मंदिर वृन्दावन के सात प्रमुख प्राचीन मंदिरों में से एक है। इसकी स्थापना परमानन्द दास जी ने की थी जो छह गोस्वामियों के शिष्य थे। यह मंदिर उस स्थान पर बना है जहाँ श्री गोपीनाथ जी स्वयं प्रकट हुए थे। मंदिर की वास्तुकला राजपूत शैली में है और यह भक्तिकाल की दिव्य स्मृति को जीवित रखता है। यहाँ की आरती और भजन की परम्परा सदियों पुरानी है।',
+      en: 'Gopinath Mandir is one of the seven principal ancient temples of Vrindavan. It was established by Paramananda Das Ji, a disciple of the Six Goswamis. The temple stands at the sacred spot where Shri Gopinath Ji self-manifested. The architecture follows the Rajput style and keeps alive the divine memory of the Bhakti era. The tradition of aarti and bhajan here is centuries old.',
+    },
+    special: {
+      hi: [
+        'वृन्दावन के सात प्राचीन मंदिरों में से एक',
+        'परमानन्द दास जी द्वारा स्थापित',
+        'श्री गोपीनाथ जी का स्वयंभू प्रकाट्य',
+        'राजपूत शैली की अद्भुत वास्तुकला',
+      ],
+      en: [
+        'One of the seven principal ancient temples of Vrindavan',
+        'Established by Paramananda Das Ji',
+        'Self-manifestation of Shri Gopinath Ji',
+        'Remarkable Rajput-style architecture',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['श्रद्धापूर्वक दर्शन करें', 'मंदिर के इतिहास को जानें और सम्मान करें', 'साफ वस्त्र पहनकर आएँ'],
+        en: ['Observe darshan with reverence', 'Learn and respect the temple\'s sacred history', 'Wear clean modest attire'],
+      },
+      donts: {
+        hi: ['मंदिर में शोर न करें', 'पवित्र परिसर में अनादर न करें'],
+        en: ['Do not make noise inside the temple', 'Do not show disrespect in the sacred premises'],
+      },
+    },
+  },
+
+  {
+    id: 'jugal-kishore',
+    category: 'prachin',
+    image: null,
+    name: {
+      hi: 'जुगल किशोर मंदिर',
+      en: 'Jugal Kishore Mandir',
+    },
+    deity: {
+      hi: 'श्री जुगल किशोर जी (राधा-कृष्ण)',
+      en: 'Shri Jugal Kishor Ji (Radha-Krishna)',
+    },
+    location: {
+      hi: 'केसी घाट के समीप, वृन्दावन',
+      en: 'Near Kesi Ghat, Vrindavan',
+    },
+    timings: {
+      morning: '8:00 AM – 12:00 PM',
+      evening: '5:00 PM – 8:00 PM',
+    },
+    story: {
+      hi: 'जुगल किशोर मंदिर वृन्दावन के प्राचीनतम मंदिरों में से एक है जिसका निर्माण सन् 1627 में हुआ था। यह मंदिर केसी घाट के समीप स्थित है और यमुना जी के पावन तट पर एक दिव्य आभा बिखेरता है। "जुगल" का अर्थ है जोड़ी — अर्थात् श्री राधा-कृष्ण की दिव्य जोड़ी। इस मंदिर में शाम की आरती अत्यन्त भावपूर्ण होती है। यह मंदिर ब्रज-संस्कृति की अमूल्य धरोहर है।',
+      en: 'Jugal Kishor Mandir is one of the oldest temples of Vrindavan, built in 1627. Located near Kesi Ghat, it radiates a divine aura on the sacred banks of Yamuna Ji. "Jugal" means a divine pair — referring to the divine couple of Shri Radha-Krishna. The evening aarti at this temple is deeply devotional and moving. The temple is a priceless heritage of Braj culture.',
+    },
+    special: {
+      hi: [
+        'सन् 1627 में निर्मित — वृन्दावन के प्राचीनतम मंदिरों में से एक',
+        'केसी घाट के समीप यमुना तट पर स्थित',
+        '"जुगल" — श्री राधा-कृष्ण की दिव्य जोड़ी का प्रतीक',
+        'सायंकाल की भावपूर्ण आरती',
+      ],
+      en: [
+        'Built in 1627 — one of the oldest temples in Vrindavan',
+        'Located near Kesi Ghat on the banks of Yamuna Ji',
+        '"Jugal" — symbol of the divine pair Shri Radha-Krishna',
+        'Deeply devotional evening aarti',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['सायंकाल की आरती में अवश्य उपस्थित हों', 'यमुना जी के दर्शन करें', 'शांत भाव से दर्शन करें'],
+        en: ['Attend the evening aarti without fail', 'Take darshan of Yamuna Ji nearby', 'Observe darshan with calm reverence'],
+      },
+      donts: {
+        hi: ['मंदिर परिसर में ऊँचे स्वर में बात न करें', 'मोबाइल फोन का उपयोग सीमित करें'],
+        en: ['Do not speak loudly in the temple premises', 'Limit mobile phone usage'],
+      },
+    },
+  },
+
+  {
+    id: 'radha-gokulananda',
+    category: 'prachin',
+    image: null,
+    name: {
+      hi: 'राधा गोकुलानन्द मंदिर',
+      en: 'Radha Gokulananda Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा गोकुलानन्द जी, श्री विनोद लाल जी, श्री जीव गोस्वामी के विग्रह',
+      en: 'Shri Radha Gokulananda Ji, Shri Vinod Lal Ji, deities of Shri Jiva Goswami',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '8:00 AM – 12:00 PM',
+      evening: '5:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'राधा गोकुलानन्द मंदिर वृन्दावन के गोस्वामी परम्परा का एक महत्त्वपूर्ण मंदिर है। यहाँ तीन गोस्वामी विग्रह एक साथ विराजमान हैं — श्री राधा गोकुलानन्द, श्री विनोद लाल, और श्री जीव गोस्वामी द्वारा सेवित विग्रह। इस मंदिर में श्री लोकनाथ गोस्वामी और श्री विश्वनाथ चक्रवर्ती ठाकुर की स्मृतियाँ भी संरक्षित हैं। यह स्थान गोस्वामी ग्रन्थों और भक्ति-साधना का केन्द्र रहा है।',
+      en: 'Radha Gokulananda Mandir is an important temple of the Goswami tradition in Vrindavan. Three Goswami deities reside here together — Shri Radha Gokulananda, Shri Vinod Lal, and deities served by Shri Jiva Goswami. The temple also preserves the sacred memories of Shri Lokanatha Goswami and Shri Vishwanatha Chakravarti Thakur. This place has been a centre for Goswami scriptures and devotional sadhana.',
+    },
+    special: {
+      hi: [
+        'तीन गोस्वामी विग्रहों का एक साथ दर्शन',
+        'श्री जीव गोस्वामी जी की स्मृतियाँ संरक्षित',
+        'श्री लोकनाथ गोस्वामी और विश्वनाथ चक्रवर्ती ठाकुर से सम्बंधित',
+        'गोस्वामी परम्परा का महत्त्वपूर्ण तीर्थ',
+      ],
+      en: [
+        'Darshan of three Goswami deities together',
+        'Sacred memories of Shri Jiva Goswami preserved',
+        'Associated with Shri Lokanatha Goswami and Vishwanatha Chakravarti Thakura',
+        'Important pilgrimage of the Goswami tradition',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['गोस्वामी परम्परा का सम्मान करें', 'शांत भाव से प्रार्थना करें', 'स्वच्छ वस्त्र पहनकर आएँ'],
+        en: ['Respect the Goswami tradition', 'Pray with a calm and reverent heart', 'Come dressed in clean attire'],
+      },
+      donts: {
+        hi: ['परिसर में भोजन न करें', 'विग्रहों को स्पर्श न करें'],
+        en: ['Do not eat inside the premises', 'Do not touch the deities'],
+      },
+    },
+  },
+
+  {
+    id: 'radha-shyamsundar',
+    category: 'prachin',
+    image: null,
+    name: {
+      hi: 'राधा श्यामसुन्दर मंदिर',
+      en: 'Radha Shyamsundar Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा श्यामसुन्दर जी',
+      en: 'Shri Radha Shyamsundar Ji',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '8:00 AM – 12:00 PM',
+      evening: '5:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'राधा श्यामसुन्दर मंदिर की स्थापना श्यामानन्द पण्डित जी ने की थी जो श्री जीव गोस्वामी के प्रमुख शिष्यों में थे। श्यामानन्द पण्डित जी को एक बार निधिवन में श्रीमती राधा रानी के नूपुर (पायल) प्राप्त हुई थी, और इसी लीला की स्मृति में उन्होंने अपने माथे पर एक विशेष "श्यामानन्दी" तिलक धारण करना आरम्भ किया। यह मंदिर गौड़ीय वैष्णव सम्प्रदाय का एक महत्त्वपूर्ण तीर्थ है।',
+      en: 'Radha Shyamsundar Mandir was established by Shyamananda Pandit Ji, one of the principal disciples of Shri Jiva Goswami. Once in Nidhivan, Shyamananda Pandit Ji received the sacred anklet (nupura) of Shrimati Radha Rani — and in memory of this divine event, he began wearing a special "Shyamanandi" tilak on his forehead. This temple is an important pilgrimage of the Gaudiya Vaishnava tradition.',
+    },
+    special: {
+      hi: [
+        'श्यामानन्द पण्डित जी द्वारा स्थापित',
+        'श्रीमती राधा रानी के नूपुर प्राप्ति की लीला-स्मृति',
+        'गौड़ीय वैष्णव सम्प्रदाय का प्रमुख तीर्थ',
+        'विशेष "श्यामानन्दी" तिलक परम्परा',
+      ],
+      en: [
+        'Established by Shyamananda Pandit Ji',
+        'Sacred memory of receiving Shrimati Radha Rani\'s divine anklet',
+        'Important pilgrimage of the Gaudiya Vaishnava tradition',
+        'Special "Shyamanandi" tilak tradition',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['इस मन्दिर का इतिहास जानकर दर्शन करें', 'श्रद्धापूर्वक प्रार्थना करें', 'मंदिर की परम्पराओं का पालन करें'],
+        en: ['Know the history of this temple before darshan', 'Pray with reverence', 'Follow the temple traditions'],
+      },
+      donts: {
+        hi: ['मंदिर में शोरगुल न करें', 'पवित्र परिसर की स्वच्छता बनाए रखें'],
+        en: ['Do not create noise inside the temple', 'Maintain cleanliness in the sacred premises'],
+      },
+    },
+  },
+
+  {
+    id: 'dwarkadheesh-mathura',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'श्री द्वारकाधीश मंदिर, मथुरा',
+      en: 'Shri Dwarkadheesh Mandir, Mathura',
+    },
+    deity: {
+      hi: 'श्री द्वारकाधीश जी (भगवान श्री कृष्ण)',
+      en: 'Shri Dwarkadheesh Ji (Bhagwan Shri Krishna)',
+    },
+    location: {
+      hi: 'विश्राम घाट के समीप, मथुरा',
+      en: 'Near Vishram Ghat, Mathura',
+    },
+    timings: {
+      summer: {
+        morning: '6:30 AM – 11:30 AM',
+        evening: '4:30 PM – 9:00 PM',
+      },
+      winter: {
+        morning: '7:00 AM – 12:00 PM',
+        evening: '3:30 PM – 8:30 PM',
+      },
+    },
+    story: {
+      hi: 'श्री द्वारकाधीश मंदिर मथुरा के विश्राम घाट के समीप स्थित भव्य और ऐतिहासिक मंदिर है। इसका निर्माण सन् 1814 में ग्वालियर के कोषाध्यक्ष श्री गोकुलदास पारीख ने करवाया था। मंदिर की वास्तुकला अत्यन्त भव्य है — विशाल नक्काशीदार खम्भे, रंगीन भित्ति-चित्र और सोने की सजावट इसे विशेष बनाती है। होली के अवसर पर यहाँ का जुलूस और उत्सव अत्यन्त प्रसिद्ध है। भगवान द्वारकाधीश के रूप में श्री कृष्ण यहाँ द्वारका के अधिपति स्वरूप में पूजे जाते हैं।',
+      en: 'Shri Dwarkadheesh Mandir is a magnificent historical temple located near Vishram Ghat in Mathura. It was constructed in 1814 by Shri Gokuldas Parikh, the treasurer of Gwalior state. The temple architecture is grandly ornate — with massive carved pillars, colourful murals, and gold embellishments. The Holi procession and festival celebrated here is extremely famous. Bhagwan Krishna is worshipped here in the form of Dwarkadheesh — the Lord of Dwarka.',
+    },
+    special: {
+      hi: [
+        'सन् 1814 में ग्वालियर के कोषाध्यक्ष द्वारा निर्मित',
+        'भव्य नक्काशीदार स्तम्भ और सोने की सजावट',
+        'होली उत्सव के लिए अत्यन्त प्रसिद्ध',
+        'विश्राम घाट के समीप यमुना तट पर स्थित',
+      ],
+      en: [
+        'Built in 1814 by the treasurer of Gwalior state',
+        'Ornate carved pillars and gold embellishments',
+        'Extremely famous for Holi festival celebrations',
+        'Located near Vishram Ghat on the banks of Yamuna Ji',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['होली के उत्सव में भाग लें', 'मंदिर की भव्यता को आत्मसात करें', 'विश्राम घाट की आरती देखें'],
+        en: ['Participate in the Holi festival', 'Soak in the grandeur of the temple', 'Watch the aarti at Vishram Ghat'],
+      },
+      donts: {
+        hi: ['मंदिर की नक्काशी और सजावट को हाथ न लगाएँ', 'भीड़ में अशिष्ट व्यवहार न करें'],
+        en: ['Do not touch the carvings and decorations', 'Do not behave disrespectfully in crowds'],
+      },
+    },
+  },
+
+  {
+    id: 'krishna-janmabhoomi',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'श्री कृष्ण जन्मभूमि, मथुरा',
+      en: 'Shri Krishna Janmabhoomi, Mathura',
+    },
+    deity: {
+      hi: 'भगवान श्री कृष्ण (जन्म-स्थान)',
+      en: 'Bhagwan Shri Krishna (birthplace)',
+    },
+    location: {
+      hi: 'मथुरा, उत्तर प्रदेश (वृन्दावन से 12 किमी)',
+      en: 'Mathura, Uttar Pradesh (12 km from Vrindavan)',
+    },
+    timings: {
+      summer: {
+        morning: '5:00 AM – 12:00 PM',
+        evening: '4:00 PM – 9:30 PM',
+      },
+      winter: {
+        morning: '5:30 AM – 12:00 PM',
+        evening: '3:30 PM – 8:30 PM',
+      },
+    },
+    story: {
+      hi: 'श्री कृष्ण जन्मभूमि वह परम पावन स्थल है जहाँ भगवान श्री कृष्ण ने द्वापर युग में अवतार लिया था। यह कंस के कारागार का स्थान है जहाँ माता देवकी और पिता वसुदेव बंदी थे। अष्टमी की आधी रात को भगवान का प्राकट्य हुआ था। इस स्थान पर विशाल मंदिर परिसर बना है जो तीर्थयात्रियों की आस्था का केन्द्र है। जन्माष्टमी पर यहाँ लाखों भक्त दर्शन के लिए आते हैं।',
+      en: 'Shri Krishna Janmabhoomi is the supremely sacred place where Bhagwan Shri Krishna took birth in the Dwapar Yuga. This is the site of Kansa\'s prison where Mother Devaki and Father Vasudeva were imprisoned. Bhagwan was born at the stroke of midnight on Ashtami. A magnificent temple complex has been built here which is the centre of faith for pilgrims. On Janmashtami, millions of devotees come for darshan.',
+    },
+    special: {
+      hi: [
+        'भगवान श्री कृष्ण का वास्तविक जन्म-स्थान',
+        'कंस के कारागार की पावन भूमि',
+        'जन्माष्टमी पर लाखों भक्तों का तीर्थ',
+        'भव्य मंदिर परिसर और संग्रहालय',
+      ],
+      en: [
+        'Actual birthplace of Bhagwan Shri Krishna',
+        'Sacred site of Kansa\'s prison',
+        'Pilgrimage for millions of devotees on Janmashtami',
+        'Grand temple complex and museum',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['जन्माष्टमी पर दर्शन का विशेष प्रयास करें', 'कारागार-गृह में दर्शन करें', 'सुरक्षा निर्देशों का पालन करें'],
+        en: ['Try to visit on Janmashtami for a special experience', 'Take darshan of the prison cell', 'Follow security instructions'],
+      },
+      donts: {
+        hi: ['परिसर में राजनीतिक नारे न लगाएँ', 'मोबाइल फोन उपयोग के नियमों का पालन करें'],
+        en: ['Do not raise political slogans in the premises', 'Follow the rules regarding mobile phone usage'],
+      },
+    },
+  },
+
+  {
+    id: 'radha-rani-barsana',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'श्री राधा रानी मंदिर, बरसाना',
+      en: 'Shri Radha Rani Mandir, Barsana',
+    },
+    deity: {
+      hi: 'श्रीमती राधा रानी जी (लाड़ली जी)',
+      en: 'Shrimati Radha Rani Ji (Ladli Ji)',
+    },
+    location: {
+      hi: 'ब्रह्माचल पर्वत, बरसाना (मथुरा जिला)',
+      en: 'Brahmaachal Hill, Barsana (Mathura district)',
+    },
+    timings: {
+      summer: {
+        morning: '5:30 AM – 12:00 PM',
+        evening: '4:30 PM – 9:00 PM',
+      },
+      winter: {
+        morning: '6:00 AM – 12:00 PM',
+        evening: '4:00 PM – 8:30 PM',
+      },
+    },
+    story: {
+      hi: 'श्री राधा रानी मंदिर बरसाना में ब्रह्माचल पर्वत की ऊँचाई पर स्थित श्रीमती राधा रानी का प्रमुख धाम है। यह वह पावन भूमि है जहाँ भगवान की प्रिया श्रीमती राधा रानी जी का जन्म हुआ था। मंदिर में चार द्वार और चार महल हैं। यहाँ की विश्वविख्यात "लठमार होली" में ब्रज की महिलाएँ पुरुषों को लाठियों से मारती हैं — यह लीला श्री कृष्ण और गोपियों की होली की स्मृति में मनाई जाती है।',
+      en: 'Shri Radha Rani Mandir is the principal abode of Shrimati Radha Rani Ji, located atop Brahmaachal Hill in Barsana. This is the sacred land where Bhagwan\'s beloved Shrimati Radha Rani Ji was born. The temple has four gates and four palace sections. The world-famous "Lathmar Holi" celebrated here — where Braj women playfully beat men with sticks — commemorates the divine Holi leela of Shri Krishna and the Gopis.',
+    },
+    special: {
+      hi: [
+        'श्रीमती राधा रानी जी की जन्मभूमि — बरसाना',
+        'ब्रह्माचल पर्वत पर स्थित — अद्भुत प्राकृतिक सौन्दर्य',
+        'विश्वविख्यात "लठमार होली" का केन्द्र',
+        'राधाष्टमी पर भव्य उत्सव',
+      ],
+      en: [
+        'Birthplace of Shrimati Radha Rani Ji — Barsana',
+        'Located on Brahmaachal Hill — breathtaking natural beauty',
+        'Centre of the world-famous "Lathmar Holi"',
+        'Grand celebrations on Radhashtami',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['होली और राधाष्टमी पर विशेष दर्शन करें', 'पहाड़ी पर सावधानी से चढ़ें', 'श्रीमती राधा रानी के दर्शन श्रद्धापूर्वक करें'],
+        en: ['Visit on Holi and Radhashtami for special celebrations', 'Climb the hill carefully', 'Take darshan of Shrimati Radha Rani with reverence'],
+      },
+      donts: {
+        hi: ['पहाड़ी पर दौड़ें नहीं', 'उत्सव में भीड़ में सावधान रहें'],
+        en: ['Do not run on the hill', 'Be careful in crowds during festivals'],
+      },
+    },
+  },
+
+  {
+    id: 'nand-bhawan',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'नन्द भवन, नन्दगाँव',
+      en: 'Nand Bhawan, Nandgaon',
+    },
+    deity: {
+      hi: 'श्री नन्द बाबा, श्री यशोदा मैया, बाल कृष्ण',
+      en: 'Shri Nanda Baba, Shri Yashoda Maiya, Bal Krishna',
+    },
+    location: {
+      hi: 'नन्दगाँव, मथुरा जिला (वृन्दावन से 50 किमी)',
+      en: 'Nandgaon, Mathura district (50 km from Vrindavan)',
+    },
+    timings: {
+      morning: '6:00 AM – 12:00 PM',
+      evening: '4:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'नन्द भवन वह पावन स्थान है जहाँ भगवान श्री कृष्ण के पालक पिता श्री नन्द बाबा और माता यशोदा रहते थे। यहीं पर बाल कृष्ण अपनी असंख्य बाल-लीलाएँ करते थे — माखन चोरी, गौचारण, और गोप-बालकों के साथ खेलना। मंदिर के परिसर में वे स्थान आज भी दर्शनीय हैं जहाँ माता यशोदा ने श्री कृष्ण को दूध पिलाया और ऊखल से बाँधा था। नन्दगाँव और बरसाना की होली भी अत्यन्त प्रसिद्ध है।',
+      en: 'Nand Bhawan is the sacred abode of Shri Nanda Baba and Mother Yashoda — the foster parents of Bhagwan Shri Krishna. It is here that Bal (child) Krishna performed His countless childhood leelas — stealing butter (makhan), grazing cows, and playing with the Gopa boys. The premises still contain sacred spots where Mother Yashoda fed Krishna milk and tied Him to the grinding mortar (ukhala). The Holi celebration between Nandgaon and Barsana is also extremely famous.',
+    },
+    special: {
+      hi: [
+        'श्री नन्द बाबा और माता यशोदा का पावन आवास',
+        'बाल कृष्ण की लीलाओं की स्मृति-भूमि',
+        'वह स्थान जहाँ माता यशोदा ने कृष्ण को ऊखल से बाँधा',
+        'नन्दगाँव-बरसाना की विश्वविख्यात होली',
+      ],
+      en: [
+        'Sacred home of Shri Nanda Baba and Mother Yashoda',
+        'Blessed land of Bal Krishna\'s divine childhood leelas',
+        'The spot where Mother Yashoda tied Krishna to the grinding mortar',
+        'World-famous Holi between Nandgaon and Barsana',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['बाल कृष्ण की लीला-भूमि को श्रद्धा से देखें', 'बरसाना भी दर्शन करें', 'स्थानीय ब्रज-संस्कृति का सम्मान करें'],
+        en: ['View Bal Krishna\'s leela-bhoomi with reverence', 'Also visit Barsana', 'Respect local Braj culture'],
+      },
+      donts: {
+        hi: ['परिसर में शोर न करें', 'स्थानीय निवासियों के साथ अशिष्ट व्यवहार न करें'],
+        en: ['Do not make noise in the premises', 'Do not behave rudely with local residents'],
+      },
+    },
+  },
+
+  {
+    id: 'pagal-baba',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'पागल बाबा मंदिर',
+      en: 'Pagal Baba Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा-कृष्ण',
+      en: 'Shri Radha-Krishna',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '7:00 AM – 12:00 PM',
+      evening: '4:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'पागल बाबा मंदिर वृन्दावन का एक अनूठा बहुमंजिला मंदिर है जिसकी प्रत्येक मंजिल पर भगवान श्री कृष्ण की जीवन-लीलाओं के विभिन्न दृश्य चित्रित हैं। इस मंदिर को एक सन्त ने बनवाया था जिन्हें प्रेम-दीवानगी के कारण "पागल बाबा" कहा जाता था। मंदिर में रंग-बिरंगी मूर्तियाँ और दृश्यावली श्री कृष्ण के जन्म से लेकर महाभारत तक की कथाओं को सजीव करती हैं। यह मंदिर तीर्थयात्रियों में विशेष रूप से लोकप्रिय है।',
+      en: 'Pagal Baba Mandir is a unique multi-story temple in Vrindavan where each floor depicts scenes from the life and divine leelas of Bhagwan Shri Krishna. The temple was built by a saint who was lovingly called "Pagal Baba" (the mad saint) due to his intense devotional love. Colourful figurines and tableaux throughout the temple bring alive stories from Krishna\'s birth through to the Mahabharata. This temple is especially popular among pilgrims.',
+    },
+    special: {
+      hi: [
+        'बहुमंजिला मंदिर — प्रत्येक मंजिल पर कृष्ण-लीला के दृश्य',
+        'प्रेम-दीवाने सन्त "पागल बाबा" द्वारा निर्मित',
+        'रंग-बिरंगी मूर्तियाँ और कथा-दृश्यावली',
+        'परिवार और बच्चों के लिए विशेष आकर्षण',
+      ],
+      en: [
+        'Multi-story temple — each floor with scenes of Krishna\'s leelas',
+        'Built by the love-intoxicated saint "Pagal Baba"',
+        'Colourful figurines and story tableaux',
+        'Special attraction for families and children',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['प्रत्येक मंजिल के दृश्यों को ध्यान से देखें', 'बच्चों को कृष्ण-लीला की कहानियाँ सुनाएँ'],
+        en: ['Carefully observe the scenes on each floor', 'Tell children the stories of Krishna\'s leelas'],
+      },
+      donts: {
+        hi: ['मूर्तियों को हाथ न लगाएँ', 'सीढ़ियों पर सावधानी बरतें'],
+        en: ['Do not touch the figurines', 'Be careful on the stairs'],
+      },
+    },
+  },
+
+  {
+    id: 'katyayani-peeth',
+    category: 'historical',
+    image: null,
+    name: {
+      hi: 'कात्यायनी पीठ',
+      en: 'Katyayani Peeth',
+    },
+    deity: {
+      hi: 'माँ कात्यायनी देवी',
+      en: 'Maa Katyayani Devi',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '6:00 AM – 12:00 PM',
+      evening: '4:00 PM – 8:00 PM',
+    },
+    story: {
+      hi: 'कात्यायनी पीठ वह पावन स्थल है जहाँ ब्रज की गोपियों ने माँ कात्यायनी देवी की आराधना करके श्री कृष्ण को पति रूप में पाने की कामना की थी। श्रीमद् भागवतम् में इस पूजा का विस्तार से वर्णन है। गोपियों ने मार्गशीर्ष मास में यमुना तट पर प्रतिदिन स्नान कर माँ कात्यायनी की पूजा की थी। इस पीठ में माँ कात्यायनी की शक्ति का वास माना जाता है और यह ब्रज-क्षेत्र के 84 कोस परिक्रमा का एक महत्त्वपूर्ण तीर्थ है।',
+      en: 'Katyayani Peeth is the sacred site where the Gopis of Braj worshipped Maa Katyayani Devi, praying to receive Shri Krishna as their husband. This puja is described in detail in Shrimad Bhagavatam. In the month of Margashirsha, the Gopis would bathe daily on the banks of Yamuna Ji and worship Maa Katyayani. This Peeth is considered the abode of Maa Katyayani\'s divine shakti and is an important pilgrimage on the 84-kosa parikrama of Braj.',
+    },
+    special: {
+      hi: [
+        'गोपियों द्वारा माँ कात्यायनी की पूजा की स्मृति-भूमि',
+        'श्रीमद् भागवतम् में वर्णित पावन स्थल',
+        'ब्रज 84 कोस परिक्रमा का महत्त्वपूर्ण पड़ाव',
+        'शक्ति-पीठ — माँ कात्यायनी की कृपा का केन्द्र',
+      ],
+      en: [
+        'Sacred site of the Gopis\' worship of Maa Katyayani',
+        'Holy place mentioned in Shrimad Bhagavatam',
+        'Important stop on the Braj 84-kosa parikrama',
+        'Shakti Peeth — centre of Maa Katyayani\'s divine grace',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['माँ कात्यायनी के दर्शन श्रद्धापूर्वक करें', 'भागवत-कथा के सन्दर्भ में इस स्थल का महत्त्व जानें'],
+        en: ['Take darshan of Maa Katyayani with reverence', 'Learn the significance of this site in the context of Bhagavat-katha'],
+      },
+      donts: {
+        hi: ['पीठ परिसर में अपवित्र वस्तुएँ न लाएँ', 'मंदिर की परम्पराओं का उल्लंघन न करें'],
+        en: ['Do not bring impure items into the Peeth premises', 'Do not violate the temple traditions'],
+      },
+    },
+  },
+
   // ─────────────────────────────────────────────────
   // C. MODERN
   // ─────────────────────────────────────────────────
@@ -516,6 +1034,256 @@ export const temples = [
       donts: {
         hi: ['फोटोग्राफी के लिए मंदिर के नियमों का पालन करें'],
         en: ['Follow the temple rules regarding photography'],
+      },
+    },
+  },
+
+  {
+    id: 'nidhivan-raj',
+    category: 'modern',
+    image: null,
+    name: {
+      hi: 'निधिवन राज मंदिर',
+      en: 'Nidhivan Raj Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा-कृष्ण',
+      en: 'Shri Radha-Krishna',
+    },
+    location: {
+      hi: 'निधिवन के समीप, वृन्दावन',
+      en: 'Near Nidhivan Grove, Vrindavan',
+    },
+    timings: {
+      morning: '7:00 AM – 12:00 PM',
+      evening: '4:30 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'निधिवन राज मंदिर वृन्दावन के पावन निधिवन वन के समीप स्थित एक भव्य और शांत मंदिर है। यह मंदिर निधिवन की दिव्य परम्परा और भगवान श्री कृष्ण की रासलीला के पावन वातावरण में स्थापित है। मंदिर की स्थापत्य-कला राजस्थानी शैली से प्रेरित है और यहाँ का वातावरण अत्यन्त शांत और आध्यात्मिक है। भक्तगण यहाँ निधिवन दर्शन के साथ इस मंदिर में भी दर्शन करते हैं।',
+      en: 'Nidhivan Raj Mandir is a magnificent and serene temple located near the sacred Nidhivan grove of Vrindavan. The temple is established within the divine atmosphere of Nidhivan — the site of Shri Krishna\'s nightly Raas Leela. Its architecture is inspired by the Rajasthani style and the ambiance is extremely peaceful and spiritual. Devotees take darshan at this temple along with visiting the Nidhivan grove.',
+    },
+    special: {
+      hi: [
+        'निधिवन की पावन परम्परा के समीप स्थित',
+        'राजस्थानी शैली की सुन्दर वास्तुकला',
+        'अत्यन्त शांत और आध्यात्मिक वातावरण',
+        'निधिवन दर्शन के साथ यात्रा का अनुशंसित पड़ाव',
+      ],
+      en: [
+        'Located near the sacred Nidhivan tradition',
+        'Beautiful Rajasthani-style architecture',
+        'Extremely peaceful and spiritual atmosphere',
+        'Recommended stop along with Nidhivan darshan',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['निधिवन के दर्शन के साथ यहाँ भी दर्शन करें', 'शांत भाव से प्रार्थना करें'],
+        en: ['Take darshan here along with Nidhivan', 'Pray with a calm and peaceful mind'],
+      },
+      donts: {
+        hi: ['सायंकाल के बाद परिसर में न रुकें', 'शोरगुल न करें'],
+        en: ['Do not linger in the premises after evening', 'Do not make noise'],
+      },
+    },
+  },
+
+  {
+    id: 'radha-ras-bihari',
+    category: 'modern',
+    image: null,
+    name: {
+      hi: 'श्री राधा रास बिहारी अष्ट सखी मंदिर',
+      en: 'Shri Radha Ras Bihari Ashta Sakhi Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा रास बिहारी जी एवं अष्ट सखियाँ',
+      en: 'Shri Radha Ras Bihari Ji and the Eight Sakhis',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '7:00 AM – 12:00 PM',
+      evening: '4:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'श्री राधा रास बिहारी अष्ट सखी मंदिर एक विशिष्ट मंदिर है जो श्रीमती राधा रानी की आठ प्रमुख सखियों — ललिता, विशाखा, चित्रा, चम्पकलता, तुंगविद्या, इन्दुलेखा, रंगदेवी और सुदेवी — को समर्पित है। भगवान श्री कृष्ण की रासलीला में इन आठ सखियों की केन्द्रीय भूमिका थी। इस मंदिर में आठों सखियों की मूर्तियाँ श्री राधा-कृष्ण के साथ स्थापित हैं। यह स्थान भक्ति-परम्परा के अनुसार सखी-भाव की साधना का केन्द्र है।',
+      en: 'Shri Radha Ras Bihari Ashta Sakhi Mandir is a unique temple dedicated to the eight principal sakhis (companions) of Shrimati Radha Rani — Lalita, Vishakha, Chitra, Champakalata, Tungavidya, Indurekha, Rangadevi, and Sudevi. These eight sakhis played a central role in Shri Krishna\'s divine Raas Leela. The temple has installed the figurines of all eight sakhis alongside Shri Radha-Krishna. This place is a centre for sakhi-bhava (devotional mood of companionship) according to the Bhakti tradition.',
+    },
+    special: {
+      hi: [
+        'श्रीमती राधा रानी की अष्ट सखियों को समर्पित अनूठा मंदिर',
+        'भक्ति-परम्परा के अनुसार सखी-भाव की साधना-भूमि',
+        'आठों सखियों की मूर्तियाँ श्री राधा-कृष्ण के साथ',
+        'रासलीला की दिव्य परम्परा का स्मरण',
+      ],
+      en: [
+        'Unique temple dedicated to the eight sakhis of Shrimati Radha Rani',
+        'Sacred ground for sakhi-bhava devotional practice',
+        'Figurines of all eight sakhis alongside Shri Radha-Krishna',
+        'Remembrance of the divine Raas Leela tradition',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['अष्ट सखियों के नाम जानकर दर्शन करें', 'भक्तिपूर्ण भाव से प्रार्थना करें'],
+        en: ['Know the names of the eight sakhis before darshan', 'Pray with a devotional heart'],
+      },
+      donts: {
+        hi: ['विग्रहों की फोटोग्राफी मंदिर के नियमानुसार करें', 'शोरगुल न करें'],
+        en: ['Follow temple rules for photography of the deities', 'Do not make noise'],
+      },
+    },
+  },
+
+  {
+    id: 'vrindavan-chandrodaya',
+    category: 'modern',
+    image: null,
+    name: {
+      hi: 'वृन्दावन चन्द्रोदय मंदिर',
+      en: 'Vrindavan Chandrodaya Mandir',
+    },
+    deity: {
+      hi: 'श्री राधा-कृष्ण',
+      en: 'Shri Radha-Krishna',
+    },
+    location: {
+      hi: 'चतिकारा रोड, वृन्दावन',
+      en: 'Chatikara Road, Vrindavan',
+    },
+    timings: {
+      morning: '7:00 AM – 12:00 PM',
+      evening: '4:00 PM – 9:00 PM',
+    },
+    story: {
+      hi: 'वृन्दावन चन्द्रोदय मंदिर विश्व के सबसे ऊँचे मंदिरों में से एक बनने की दिशा में निर्माणाधीन भव्य परियोजना है। यह मंदिर इस्कॉन के मार्गदर्शन में बनाया जा रहा है और इसकी ऊँचाई 213 मीटर (700 फुट) से अधिक होगी। मंदिर में श्री राधा-कृष्ण की लीला-भूमियों का भव्य प्रदर्शन, वेदिक थीम पार्क, और डिजिटल प्रदर्शनी होगी। यह आधुनिक भक्ति की एक अभूतपूर्व संरचना है जो विश्व भर के भक्तों को आकर्षित करेगी।',
+      en: 'Vrindavan Chandrodaya Mandir is a grand under-construction project that aims to become one of the tallest temples in the world. Being built under the guidance of ISKCON, it will rise to over 213 metres (700 feet). The temple will feature a grand exhibition of Shri Radha-Krishna\'s leela-bhoomi, a Vedic theme park, and digital exhibitions. It is an unprecedented modern devotional structure that will attract devotees from across the world.',
+    },
+    special: {
+      hi: [
+        'विश्व के सबसे ऊँचे मंदिरों में से एक (213 मीटर+)',
+        'ISKCON के मार्गदर्शन में निर्माणाधीन',
+        'वेदिक थीम पार्क और डिजिटल प्रदर्शनी की योजना',
+        'आधुनिक भक्ति-स्थापत्य का अद्भुत उदाहरण',
+      ],
+      en: [
+        'One of the tallest temples in the world (213 m+)',
+        'Under construction under ISKCON guidance',
+        'Plans for Vedic theme park and digital exhibitions',
+        'A remarkable example of modern devotional architecture',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['निर्माण-प्रगति देखें और प्रेरणा लें', 'दर्शन उपलब्ध भागों में करें'],
+        en: ['Observe the construction progress and draw inspiration', 'Take darshan in available sections'],
+      },
+      donts: {
+        hi: ['निर्माण-क्षेत्र में अनधिकृत प्रवेश न करें', 'सुरक्षा निर्देशों का पालन करें'],
+        en: ['Do not enter unauthorized construction areas', 'Follow safety instructions'],
+      },
+    },
+  },
+
+  {
+    id: 'jai-gurudev-mathura',
+    category: 'modern',
+    image: null,
+    name: {
+      hi: 'जय गुरुदेव मंदिर, मथुरा',
+      en: 'Jai Gurudev Mandir, Mathura',
+    },
+    deity: {
+      hi: 'श्री राधा-कृष्ण, संत जय गुरुदेव जी',
+      en: 'Shri Radha-Krishna, Sant Jai Gurudev Ji',
+    },
+    location: {
+      hi: 'मथुरा-आगरा राजमार्ग, मथुरा',
+      en: 'Mathura-Agra Highway, Mathura',
+    },
+    timings: {
+      morning: '5:00 AM – 12:00 PM',
+      evening: '3:00 PM – 9:00 PM',
+    },
+    story: {
+      hi: 'जय गुरुदेव मंदिर मथुरा-आगरा राजमार्ग पर स्थित एक विशाल और भव्य धाम है। इसकी स्थापना संत जय गुरुदेव जी ने की थी। मंदिर परिसर में भव्य प्रवेश-द्वार, विशाल सभागार, और श्री राधा-कृष्ण के सुन्दर मंदिर हैं। यह स्थान उत्तर प्रदेश के श्रद्धालुओं की आस्था का एक बड़ा केन्द्र है। लाखों भक्त यहाँ प्रतिवर्ष दर्शन के लिए आते हैं।',
+      en: 'Jai Gurudev Mandir is a vast and magnificent dhaam located on the Mathura-Agra highway. It was established by Sant Jai Gurudev Ji. The temple complex features grand entrance gates, a massive hall, and beautiful temples of Shri Radha-Krishna. This place is a major centre of faith for devotees of Uttar Pradesh. Millions of devotees visit here every year.',
+    },
+    special: {
+      hi: [
+        'संत जय गुरुदेव जी द्वारा स्थापित',
+        'विशाल मंदिर परिसर — भव्य सभागार और प्रवेश-द्वार',
+        'लाखों भक्तों का तीर्थ-केन्द्र',
+        'मथुरा-आगरा राजमार्ग पर सुलभ स्थान',
+      ],
+      en: [
+        'Established by Sant Jai Gurudev Ji',
+        'Vast temple complex — grand hall and entrance gates',
+        'Pilgrimage centre for millions of devotees',
+        'Conveniently located on Mathura-Agra highway',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['विशाल सभागार में आयोजित कार्यक्रमों में भाग लें', 'संत के उपदेशों से प्रेरणा लें'],
+        en: ['Participate in programmes held in the grand hall', 'Draw inspiration from the saint\'s teachings'],
+      },
+      donts: {
+        hi: ['परिसर में धूम्रपान न करें', 'मांसाहारी खाद्य सामग्री न लाएँ'],
+        en: ['Do not smoke in the premises', 'Do not bring non-vegetarian food'],
+      },
+    },
+  },
+
+  {
+    id: 'barsana-dham',
+    category: 'modern',
+    image: null,
+    name: {
+      hi: 'बरसाना धाम / रंगीली महल',
+      en: 'Barsana Dham / Rangeeli Mahal',
+    },
+    deity: {
+      hi: 'श्रीमती राधा रानी जी',
+      en: 'Shrimati Radha Rani Ji',
+    },
+    location: {
+      hi: 'बरसाना, मथुरा जिला',
+      en: 'Barsana, Mathura district',
+    },
+    timings: {
+      morning: '6:00 AM – 12:00 PM',
+      evening: '4:00 PM – 8:30 PM',
+    },
+    story: {
+      hi: 'बरसाना धाम — जिसे रंगीली महल भी कहते हैं — श्रीमती राधा रानी जी की जन्मभूमि बरसाना में स्थित एक आधुनिक भव्य तीर्थ-परिसर है। यहाँ राधा रानी की लीलाओं का विस्तार से चित्रण किया गया है। "रंगीली महल" नाम राधा रानी की रंगीन और उत्सवपूर्ण लीलाओं का स्मरण कराता है। यह परिसर होली के त्योहार के दौरान विशेष रूप से प्रसिद्ध है जब यहाँ लठमार होली खेली जाती है।',
+      en: 'Barsana Dham — also known as Rangeeli Mahal — is a modern grand pilgrimage complex in Barsana, the birthplace of Shrimati Radha Rani Ji. It depicts the divine leelas of Radha Rani in detail. The name "Rangeeli Mahal" evokes the colourful and festive leelas of Radha Rani. The complex is especially famous during the Holi festival when the famous Lathmar Holi is played here.',
+    },
+    special: {
+      hi: [
+        'श्रीमती राधा रानी की जन्मभूमि बरसाना में भव्य परिसर',
+        '"रंगीली महल" — रंग और उत्सव का प्रतीक',
+        'लठमार होली के दौरान विशेष उत्सव',
+        'राधा रानी की लीलाओं का विस्तार से चित्रण',
+      ],
+      en: [
+        'Grand complex in Barsana — birthplace of Shrimati Radha Rani',
+        '"Rangeeli Mahal" — symbol of colour and celebration',
+        'Special celebrations during Lathmar Holi',
+        'Detailed depiction of Radha Rani\'s divine leelas',
+      ],
+    },
+    dosDonts: {
+      dos: {
+        hi: ['होली उत्सव में भाग लें', 'राधा रानी की लीलाओं के चित्रण को ध्यान से देखें'],
+        en: ['Participate in the Holi festival', 'Observe the depictions of Radha Rani\'s leelas carefully'],
+      },
+      donts: {
+        hi: ['उत्सव में अशिष्ट व्यवहार न करें', 'रंग खेलते समय दूसरों का ध्यान रखें'],
+        en: ['Do not behave disrespectfully during festivals', 'Be considerate of others while playing with colours'],
       },
     },
   },

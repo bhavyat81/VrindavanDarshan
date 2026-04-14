@@ -1,12 +1,13 @@
 import React from 'react';
 import {
-  View, Text, ScrollView, StyleSheet,
+  View, Text, ScrollView, StyleSheet, TouchableOpacity,
 } from 'react-native';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { temples } from '../data/temples';
 import { colors } from '../theme/colors';
 import TimingCard from '../components/TimingCard';
+import { useFavorites } from '../context/FavoritesContext';
 
 const CATEGORY_COLORS = {
   prachin: colors.prachinBadge,
@@ -48,6 +49,7 @@ export default function TempleDetailScreen({ route }) {
   const { templeId } = route.params;
   const { language } = useLanguage();
   const t = translations[language];
+  const { isFavorite, toggleFavorite } = useFavorites();
   const temple = temples.find((item) => item.id === templeId);
 
   if (!temple) {
@@ -71,8 +73,19 @@ export default function TempleDetailScreen({ route }) {
 
       {/* Title Section */}
       <View style={styles.titleSection}>
-        <View style={[styles.badge, { backgroundColor: badgeColor }]}>
-          <Text style={styles.badgeText}>{categoryLabel}</Text>
+        <View style={styles.titleTopRow}>
+          <View style={[styles.badge, { backgroundColor: badgeColor }]}>
+            <Text style={styles.badgeText}>{categoryLabel}</Text>
+          </View>
+          <TouchableOpacity
+            style={styles.favBtn}
+            onPress={() => toggleFavorite(temple.id)}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          >
+            <Text style={styles.favBtnText}>
+              {isFavorite(temple.id) ? '♥' : '♡'}
+            </Text>
+          </TouchableOpacity>
         </View>
         <OrnamentDivider color={colors.accent} />
         <Text style={styles.templeName}>{temple.name[language]}</Text>
@@ -179,6 +192,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
     padding: 20,
     paddingBottom: 24,
+  },
+  titleTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  favBtn: {
+    padding: 4,
+  },
+  favBtnText: {
+    fontSize: 28,
+    color: '#FF6B6B',
   },
   badge: {
     alignSelf: 'flex-start',

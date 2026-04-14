@@ -43,6 +43,11 @@ export const translations = {
     leela_title: 'लीला स्थल',
     lang_toggle: 'EN',
     timing_disclaimer: 'समय त्योहारों के दौरान परिवर्तित हो सकता है। कृपया पहले से पुष्टि करें।',
+    navFavorites: 'पसंदीदा',
+    navParikrama: 'परिक्रमा',
+    home_parikrama: 'परिक्रमा मार्ग',
+    favorites_title: 'पसंदीदा मंदिर',
+    parikrama_title: 'वृन्दावन परिक्रमा',
   },
   en: {
     appTitle: 'वृन्दावन दर्शन',
@@ -88,5 +93,10 @@ export const translations = {
     leela_title: 'Leela Sthals',
     lang_toggle: 'हि',
     timing_disclaimer: 'Timings may vary during festivals. Please confirm in advance.',
+    navFavorites: 'Favourites',
+    navParikrama: 'Parikrama',
+    home_parikrama: 'Parikrama Route',
+    favorites_title: 'Favourite Temples',
+    parikrama_title: 'Vrindavan Parikrama',
   },
 };
