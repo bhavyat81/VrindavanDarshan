@@ -188,5 +188,268 @@ export const leelaSthals = [
       ],
     },
   },
+
+  {
+    id: 'chir-ghat',
+    name: {
+      hi: 'चीर घाट',
+      en: 'Chir Ghat',
+    },
+    deity: {
+      hi: 'श्री कृष्ण (चीर-हरण लीला)',
+      en: 'Shri Krishna (Chir-Haran leela)',
+    },
+    location: {
+      hi: 'यमुना तट, वृन्दावन',
+      en: 'On the banks of Yamuna Ji, Vrindavan',
+    },
+    timings: {
+      morning: 'सूर्योदय से सूर्यास्त तक',
+      en_morning: 'Sunrise to Sunset',
+    },
+    story: {
+      hi: 'चीर घाट यमुना जी के तट पर वह पावन स्थल है जहाँ भगवान श्री कृष्ण ने गोपियों के वस्त्र (चीर) हरण किए थे। एक बार गोपियाँ यमुना जी में स्नान कर रही थीं, तभी भगवान ने उनके वस्त्र उठाकर कदम्ब के वृक्ष पर रख दिए। यह लीला केवल मनोविनोद नहीं थी — इसके द्वारा भगवान ने गोपियों को सिखाया कि भक्ति में पूर्ण समर्पण ही सर्वोच्च है। यमुना जी के प्रति भी यह सन्देश था कि उनके जल में स्नान भगवद्-कृपा का द्वार है।',
+      en: 'Chir Ghat is the sacred site on the banks of Yamuna Ji where Bhagwan Shri Krishna stole the clothes (chir) of the Gopis. Once, while the Gopis were bathing in Yamuna Ji, Bhagwan took their clothes and placed them on a kadamba tree. This leela was not mere playfulness — through it, Bhagwan taught the Gopis that complete surrender in devotion is supreme. It also conveyed to Yamuna Ji that bathing in Her waters is a doorway to divine grace.',
+    },
+    special: {
+      hi: [
+        'श्री कृष्ण की चीर-हरण लीला की पावन स्मृति-भूमि',
+        'यमुना तट पर एकान्त और शांत स्थल',
+        'भक्ति में पूर्ण समर्पण का दिव्य सन्देश',
+      ],
+      en: [
+        'Sacred site of Shri Krishna\'s Chir-Haran leela',
+        'Serene and peaceful spot on the banks of Yamuna Ji',
+        'Divine message of complete surrender in devotion',
+      ],
+    },
+  },
+
+  {
+    id: 'radha-kund',
+    name: {
+      hi: 'राधा कुण्ड',
+      en: 'Radha Kund',
+    },
+    deity: {
+      hi: 'श्रीमती राधा रानी जी',
+      en: 'Shrimati Radha Rani Ji',
+    },
+    location: {
+      hi: 'गोवर्धन के समीप, मथुरा जिला',
+      en: 'Near Govardhan, Mathura district',
+    },
+    timings: {
+      morning: 'सूर्योदय से सूर्यास्त तक',
+      en_morning: 'Sunrise to Sunset',
+    },
+    story: {
+      hi: 'राधा कुण्ड ब्रज-मण्डल का सर्वाधिक पवित्र सरोवर है। ऐसी मान्यता है कि इस कुण्ड का निर्माण स्वयं श्रीमती राधा रानी जी ने किया था। जब भगवान श्री कृष्ण ने अरिष्टासुर का वध किया, तब गोपियों ने कहा कि एक गौ-हत्यारे को स्पर्श करने के बाद भगवान को पवित्र होना चाहिए। तब श्रीमती राधा रानी ने अपनी कड़े (कंगन) से एक कुण्ड खोदा और उसमें सभी तीर्थों का जल मँगाया। इस कुण्ड में स्नान करने से समस्त पापों का नाश होता है।',
+      en: 'Radha Kund is the most sacred lake of the Braj-mandala. It is believed that this lake was created by Shrimati Radha Rani Herself. When Bhagwan Shri Krishna slew the demon Arishtasura, the Gopis said that after touching a cow-slayer He should be purified. Thereupon, Shrimati Radha Rani dug a lake with Her bracelets and summoned the waters of all sacred tirthas into it. Bathing in this lake destroys all sins.',
+    },
+    special: {
+      hi: [
+        'ब्रज-मण्डल का सर्वाधिक पवित्र सरोवर — श्रीमती राधा रानी द्वारा निर्मित',
+        'स्नान से समस्त पापों का नाश',
+        'कार्तिक मास में स्नान का विशेष महत्त्व',
+        'गोस्वामियों द्वारा अत्यधिक प्रशंसित तीर्थ',
+      ],
+      en: [
+        'Most sacred lake of Braj-mandala — created by Shrimati Radha Rani Herself',
+        'Bathing destroys all sins',
+        'Bathing in the month of Kartika is especially meritorious',
+        'Highly praised pilgrimage by the Goswamis',
+      ],
+    },
+  },
+
+  {
+    id: 'shyam-kund',
+    name: {
+      hi: 'श्याम कुण्ड',
+      en: 'Shyam Kund',
+    },
+    deity: {
+      hi: 'श्री कृष्ण (श्याम)',
+      en: 'Shri Krishna (Shyam)',
+    },
+    location: {
+      hi: 'राधा कुण्ड के समीप, गोवर्धन',
+      en: 'Adjacent to Radha Kund, Govardhan',
+    },
+    timings: {
+      morning: 'सूर्योदय से सूर्यास्त तक',
+      en_morning: 'Sunrise to Sunset',
+    },
+    story: {
+      hi: 'श्याम कुण्ड राधा कुण्ड के ठीक बगल में स्थित भगवान श्री कृष्ण का कुण्ड है। जब श्रीमती राधा रानी ने अपना कुण्ड बनाया, तब भगवान ने भी अपनी कड़े (कंगन) से यह कुण्ड खोदा। दोनों कुण्ड एक-दूसरे से जुड़े हुए हैं — जैसे राधा और कृष्ण अविभाज्य हैं। भागवत के अनुसार जो राधा कुण्ड में स्नान करता है, उसे भगवान का प्रेम प्राप्त होता है। श्याम कुण्ड में स्नान भी अत्यन्त पुण्यकारी माना जाता है।',
+      en: 'Shyam Kund is the lake of Bhagwan Shri Krishna, situated right next to Radha Kund. When Shrimati Radha Rani created Her lake, Bhagwan also dug this lake with His bracelet. Both lakes are connected to each other — just as Radha and Krishna are inseparable. According to the Bhagavatam, one who bathes in Radha Kund attains the love of Bhagwan. Bathing in Shyam Kund is also considered extremely meritorious.',
+    },
+    special: {
+      hi: [
+        'राधा कुण्ड के समीप भगवान श्री कृष्ण का कुण्ड',
+        'दोनों कुण्ड परस्पर जुड़े हुए — राधा-कृष्ण की अभेद्यता का प्रतीक',
+        'स्नान से भगवत्-प्रेम की प्राप्ति',
+        'कार्तिक स्नान का विशेष महत्त्व',
+      ],
+      en: [
+        'Lake of Bhagwan Shri Krishna adjacent to Radha Kund',
+        'Both lakes are connected — symbol of the inseparability of Radha-Krishna',
+        'Bathing confers divine love',
+        'Especially meritorious to bathe in Kartika month',
+      ],
+    },
+  },
+
+  {
+    id: 'kaliya-ghat',
+    name: {
+      hi: 'कालिया घाट',
+      en: 'Kaliya Ghat',
+    },
+    deity: {
+      hi: 'श्री कृष्ण (कालिया नाग दमन स्थल)',
+      en: 'Shri Krishna (site of Kaliya serpent defeat)',
+    },
+    location: {
+      hi: 'यमुना तट, वृन्दावन',
+      en: 'On the banks of Yamuna Ji, Vrindavan',
+    },
+    timings: {
+      morning: 'सूर्योदय से सूर्यास्त तक',
+      en_morning: 'Sunrise to Sunset',
+    },
+    story: {
+      hi: 'कालिया घाट यमुना जी के तट पर वह पावन स्थल है जहाँ भगवान श्री कृष्ण ने कालिया नाग को परास्त किया था। कालिया नाग ने यमुना जी के एक गहरे भाग को अपना निवास बना लिया था और उसके विष से यमुना का जल विषाक्त हो गया था। तब भगवान ने कदम्ब वृक्ष से यमुना में छलाँग लगाई और कालिया नाग के फनों पर नृत्य करके उसे वश में किया। अन्त में कालिया की पत्नियों की प्रार्थना पर भगवान ने उसे क्षमा कर दिया।',
+      en: 'Kaliya Ghat is the sacred site on the banks of Yamuna Ji where Bhagwan Shri Krishna defeated the Kaliya serpent. Kaliya had made his abode in a deep portion of Yamuna Ji and his venom had poisoned Her waters. Bhagwan then leapt from a kadamba tree into Yamuna Ji and, dancing upon the hoods of Kaliya, subdued him. At the prayer of Kaliya\'s wives, Bhagwan forgave him and commanded him to leave the Yamuna-mandala.',
+    },
+    special: {
+      hi: [
+        'कालिया नाग दमन की पावन लीला-भूमि',
+        'भगवान द्वारा यमुना जी की रक्षा का पावन स्थल',
+        'यमुना तट पर एकान्त और प्रकृतिमय वातावरण',
+      ],
+      en: [
+        'Sacred leela-bhoomi of Kaliya serpent defeat',
+        'Holy site where Bhagwan protected Yamuna Ji',
+        'Serene and natural environment on the banks of Yamuna Ji',
+      ],
+    },
+  },
+
+  {
+    id: 'vamshi-vat',
+    name: {
+      hi: 'वंशी वट',
+      en: 'Vamshi Vat',
+    },
+    deity: {
+      hi: 'श्री कृष्ण (वंशी-वादन लीला)',
+      en: 'Shri Krishna (flute-playing leela)',
+    },
+    location: {
+      hi: 'केसी घाट के समीप, वृन्दावन',
+      en: 'Near Kesi Ghat, Vrindavan',
+    },
+    timings: {
+      morning: '6:00 AM – 6:00 PM',
+      en_morning: '6:00 AM – 6:00 PM',
+    },
+    story: {
+      hi: 'वंशी वट वह पावन स्थल है जहाँ भगवान श्री कृष्ण वट-वृक्ष के नीचे बैठकर अपनी दिव्य बाँसुरी (वंशी) बजाते थे। उनकी बाँसुरी की मधुर ध्वनि सुनकर गोपियाँ सब काम-धाम छोड़कर उनके पास आ जाती थीं। यह वही वृक्ष है जिसके नीचे महारासलीला की प्रारम्भिक तैयारी हुई थी। वंशी वट की यात्रा बिना वृन्दावन-दर्शन अधूरा माना जाता है।',
+      en: 'Vamshi Vat is the sacred site where Bhagwan Shri Krishna would sit under the banyan tree and play His divine flute (vamshi). Hearing the sweet sound of His flute, the Gopis would leave all their work and come to Him. This is the very tree under which the initial preparations for the Maha-Raas Leela took place. A visit to Vrindavan is considered incomplete without visiting Vamshi Vat.',
+    },
+    special: {
+      hi: [
+        'वह पावन वट-वृक्ष जहाँ भगवान बाँसुरी बजाते थे',
+        'गोपियों को आकर्षित करने वाली वंशी-ध्वनि की लीला-भूमि',
+        'महारासलीला की पूर्व-तैयारी का स्थान',
+        'वृन्दावन-दर्शन में अनिवार्य तीर्थ',
+      ],
+      en: [
+        'The sacred banyan tree where Bhagwan played His divine flute',
+        'Leela-bhoomi of the flute-music that attracted the Gopis',
+        'Site of preparations for the Maha-Raas Leela',
+        'Essential pilgrimage in the Vrindavan darshan',
+      ],
+    },
+  },
+
+  {
+    id: 'imlitala',
+    name: {
+      hi: 'इमलीतला',
+      en: 'Imlitala',
+    },
+    deity: {
+      hi: 'श्री चैतन्य महाप्रभु और श्री राधा-कृष्ण',
+      en: 'Shri Chaitanya Mahaprabhu and Shri Radha-Krishna',
+    },
+    location: {
+      hi: 'यमुना तट, वृन्दावन',
+      en: 'On the banks of Yamuna Ji, Vrindavan',
+    },
+    timings: {
+      morning: '6:00 AM – 6:00 PM',
+      en_morning: '6:00 AM – 6:00 PM',
+    },
+    story: {
+      hi: 'इमलीतला वह पावन स्थल है जहाँ श्री चैतन्य महाप्रभु ने वृन्दावन दर्शन के समय इमली के वृक्ष के नीचे बैठकर ध्यान किया था। श्री चैतन्य महाप्रभु जब वृन्दावन आए तो वे भगवान श्री कृष्ण के वियोग में इतने भाव-विभोर हो गए कि कई दिन यहाँ समाधि में बैठे रहे। इस स्थान का वातावरण आज भी अत्यन्त दिव्य और शांत है। यहाँ आकर भक्तों के मन में स्वतः ही भगवद्-भजन का भाव जागृत होता है।',
+      en: 'Imlitala is the sacred site where Shri Chaitanya Mahaprabhu sat in meditation under a tamarind tree during his visit to Vrindavan. When Shri Chaitanya Mahaprabhu came to Vrindavan, he became so overwhelmed with divine longing for Bhagwan Shri Krishna that he remained here in deep samadhi for several days. The atmosphere of this place is still extremely divine and serene. The hearts of devotees who come here are spontaneously awakened to devotional bhajan.',
+    },
+    special: {
+      hi: [
+        'श्री चैतन्य महाप्रभु की ध्यान-भूमि',
+        'इमली के वृक्ष की छाया में समाधि का पावन स्थान',
+        'अत्यन्त शांत और दिव्य वातावरण',
+        'भक्त-परम्परा का अमूल्य तीर्थ',
+      ],
+      en: [
+        'Meditation-bhoomi of Shri Chaitanya Mahaprabhu',
+        'Sacred spot of samadhi under the shade of the tamarind tree',
+        'Extremely peaceful and divine atmosphere',
+        'Invaluable pilgrimage of the Bhakti tradition',
+      ],
+    },
+  },
+
+  {
+    id: 'ter-kadamba',
+    name: {
+      hi: 'तेर कदम्ब',
+      en: 'Ter Kadamba',
+    },
+    deity: {
+      hi: 'श्री कृष्ण और श्रीमती राधा रानी',
+      en: 'Shri Krishna and Shrimati Radha Rani',
+    },
+    location: {
+      hi: 'वृन्दावन, उत्तर प्रदेश',
+      en: 'Vrindavan, Uttar Pradesh',
+    },
+    timings: {
+      morning: '6:00 AM – 6:00 PM',
+      en_morning: '6:00 AM – 6:00 PM',
+    },
+    story: {
+      hi: 'तेर कदम्ब वृन्दावन का वह पावन कदम्ब वृक्ष है जहाँ भगवान श्री कृष्ण श्रीमती राधा रानी की प्रतीक्षा किया करते थे। "तेर" का अर्थ है ढूँढना या प्रतीक्षा करना — अर्थात् यह वह स्थान है जहाँ भगवान अपनी प्रिया राधा रानी को ढूँढते थे। इस स्थान पर कदम्ब वृक्ष की दिव्य उपस्थिति आज भी उस अनन्त प्रेम-लीला की याद दिलाती है। यहाँ के वातावरण में एक अनिर्वचनीय आध्यात्मिक सौन्दर्य है।',
+      en: 'Ter Kadamba is the sacred kadamba tree in Vrindavan where Bhagwan Shri Krishna would wait for Shrimati Radha Rani. "Ter" means searching or waiting — this is the place where Bhagwan would search for and await His beloved Radha Rani. The divine presence of the kadamba tree at this spot is still a reminder of that eternal leela of love. The atmosphere here carries an ineffable spiritual beauty.',
+    },
+    special: {
+      hi: [
+        'वह कदम्ब वृक्ष जहाँ श्री कृष्ण राधा रानी की प्रतीक्षा करते थे',
+        '"तेर" — प्रतीक्षा और प्रेम का दिव्य प्रतीक',
+        'अनिर्वचनीय आध्यात्मिक सौन्दर्य का स्थल',
+        'वृन्दावन-यात्रा का अनुशंसित तीर्थ',
+      ],
+      en: [
+        'The kadamba tree where Shri Krishna awaited Radha Rani',
+        '"Ter" — divine symbol of longing and love',
+        'Site of ineffable spiritual beauty',
+        'Recommended pilgrimage on the Vrindavan tour',
+      ],
+    },
+  },
+
 ];
 

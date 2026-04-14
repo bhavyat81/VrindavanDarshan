@@ -7,12 +7,15 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import { colors } from '../theme/colors';
 import LanguageToggle from '../components/LanguageToggle';
+import DailyShloka from '../components/DailyShloka';
 
 const { width } = Dimensions.get('window');
 
 const NAV_CARDS = [
   { key: 'mandirs', emoji: '🛕', labelKey: 'home_mandirs', tab: 'Mandirs', color: '#FF6B35', bg: '#FFF0E8' },
   { key: 'leela', emoji: '🍃', labelKey: 'home_leelaSthals', tab: 'LeelaSthals', color: '#6A1B9A', bg: '#F5EEF8' },
+  { key: 'favorites', emoji: '♥', labelKey: 'navFavorites', tab: 'Favorites', color: '#C62828', bg: '#FFF0F0' },
+  { key: 'parikrama', emoji: '🚶', labelKey: 'home_parikrama', tab: 'Parikrama', color: '#5C2D91', bg: '#F0EBF8' },
   { key: 'info', emoji: 'ℹ️', labelKey: 'home_visitorInfo', tab: 'Info', color: '#1565C0', bg: '#EEF4FB' },
   { key: 'about', emoji: '📖', labelKey: 'home_about', tab: 'Info', screen: 'About', color: '#2E7D32', bg: '#EEF5EE' },
 ];
@@ -23,6 +26,10 @@ export default function HomeScreen({ navigation }) {
   const t = translations[language];
 
   const handleNavCard = (card) => {
+    if (card.tab === 'Parikrama') {
+      navigation.navigate('Parikrama');
+      return;
+    }
     if (card.tab) {
       if (card.screen) {
         navigation.navigate(card.tab, { screen: card.screen });
@@ -63,6 +70,14 @@ export default function HomeScreen({ navigation }) {
           <View style={styles.heroDividerLine} />
         </View>
       </View>
+
+      {/* Ornamental divider */}
+      <View style={styles.sectionDivider}>
+        <Text style={styles.sectionDividerText}>— ✦ —</Text>
+      </View>
+
+      {/* Daily Shloka */}
+      <DailyShloka />
 
       {/* Ornamental divider */}
       <View style={styles.sectionDivider}>

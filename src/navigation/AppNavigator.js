@@ -13,9 +13,45 @@ import TempleDetailScreen from '../screens/TempleDetailScreen';
 import LeelaSthalsScreen from '../screens/LeelaSthalsScreen';
 import VisitorInfoScreen from '../screens/VisitorInfoScreen';
 import AboutScreen from '../screens/AboutScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import ParikramaScreen from '../screens/ParikramaScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
+function HomeStack() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: colors.secondary },
+        headerTintColor: colors.white,
+        headerTitleStyle: { fontWeight: '700' },
+      }}
+    >
+      <Stack.Screen
+        name="HomeMain"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Parikrama"
+        component={ParikramaScreen}
+        options={{ title: t.parikrama_title, headerShown: false }}
+      />
+      <Stack.Screen
+        name="ParikramaTempleDetail"
+        component={TempleDetailScreen}
+        options={({ route }) => ({
+          title: route.params?.templeName || t.temples_title,
+          headerBackTitle: t.navParikrama,
+        })}
+      />
+    </Stack.Navigator>
+  );
+}
 
 function TemplesStack() {
   const { language } = useLanguage();
@@ -40,6 +76,35 @@ function TemplesStack() {
         options={({ route }) => ({
           title: route.params?.templeName || t.temples_title,
           headerBackTitle: t.navMandirs,
+        })}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function FavoritesStack() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: colors.secondary },
+        headerTintColor: colors.white,
+        headerTitleStyle: { fontWeight: '700' },
+      }}
+    >
+      <Stack.Screen
+        name="FavoritesList"
+        component={FavoritesScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FavoriteDetail"
+        component={TempleDetailScreen}
+        options={({ route }) => ({
+          title: route.params?.templeName || t.favorites_title,
+          headerBackTitle: t.navFavorites,
         })}
       />
     </Stack.Navigator>
@@ -84,6 +149,7 @@ export default function AppNavigator() {
             let emoji;
             if (route.name === 'Home') emoji = '🏠';
             else if (route.name === 'Mandirs') emoji = '🛕';
+            else if (route.name === 'Favorites') emoji = '♥';
             else if (route.name === 'LeelaSthals') emoji = '🍃';
             else if (route.name === 'Info') emoji = 'ℹ️';
             return <Text style={{ fontSize: 22 }}>{emoji}</Text>;
@@ -105,13 +171,18 @@ export default function AppNavigator() {
       >
         <Tab.Screen
           name="Home"
-          component={HomeScreen}
+          component={HomeStack}
           options={{ title: t.navHome, headerShown: false }}
         />
         <Tab.Screen
           name="Mandirs"
           component={TemplesStack}
           options={{ title: t.navMandirs, headerShown: false }}
+        />
+        <Tab.Screen
+          name="Favorites"
+          component={FavoritesStack}
+          options={{ title: t.navFavorites, headerShown: false }}
         />
         <Tab.Screen
           name="LeelaSthals"

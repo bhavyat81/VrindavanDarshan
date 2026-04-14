@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useLanguage } from '../context/LanguageContext';
+import { useFavorites } from '../context/FavoritesContext';
 import { colors } from '../theme/colors';
 
 const CATEGORY_COLORS = {
@@ -38,9 +39,11 @@ const CATEGORY_LABELS = {
 
 export default function TempleCard({ temple, onPress }) {
   const { language } = useLanguage();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const badgeColor = CATEGORY_COLORS[temple.category] || colors.primary;
   const categoryLabel = CATEGORY_LABELS[language][temple.category] || temple.category;
   const categoryEmoji = CATEGORY_EMOJIS[temple.category] || '🛕';
+  const favorited = isFavorite(temple.id);
 
   const getTimingPreview = () => {
     if (temple.timings?.summer?.morning) return temple.timings.summer.morning;
@@ -50,12 +53,22 @@ export default function TempleCard({ temple, onPress }) {
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
-      {/* Colored top banner strip */}
-      <View style={[styles.cardBanner, { backgroundColor: badgeColor }]}>
-        <Text style={styles.bannerEmoji}>{categoryEmoji}</Text>
-        <View style={[styles.badge]}>
-          <Text style={styles.badgeText}>{categoryLabel}</Text>
+      <View style={styles.cardBanner}>
+        <View style={[styles.cardBannerInner, { backgroundColor: badgeColor }]}>
+          <Text style={styles.bannerEmoji}>{categoryEmoji}</Text>
+          <View style={[styles.badge]}>
+            <Text style={styles.badgeText}>{categoryLabel}</Text>
+          </View>
         </View>
+        <TouchableOpacity
+          style={styles.heartBtn}
+          onPress={() => toggleFavorite(temple.id)}
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        >
+          <Text style={[styles.heartIcon, favorited && styles.heartIconActive]}>
+            {favorited ? '♥' : '♡'}
+          </Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.cardBody}>
         <Text style={styles.name}>{temple.name[language]}</Text>
@@ -102,10 +115,29 @@ const styles = StyleSheet.create({
   },
   cardBanner: {
     flexDirection: 'row',
+    alignItems: 'stretch',
+  },
+  cardBannerInner: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 14,
     paddingVertical: 8,
     gap: 8,
+  },
+  heartBtn: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.18)',
+  },
+  heartIcon: {
+    fontSize: 20,
+    color: 'rgba(255,255,255,0.7)',
+  },
+  heartIconActive: {
+    color: '#FF6B6B',
   },
   bannerEmoji: {
     fontSize: 20,
