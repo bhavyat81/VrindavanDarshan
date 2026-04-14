@@ -6,7 +6,11 @@ import { colors } from '../theme/colors';
 
 export default function DailyShloka() {
   const { language } = useLanguage();
-  const dayIndex = new Date().getDate() % shlokas.length;
+  const today = new Date();
+  const dayOfYear = Math.floor(
+    (today - new Date(today.getFullYear(), 0, 0)) / 86400000
+  );
+  const dayIndex = dayOfYear % shlokas.length;
   const shloka = shlokas[dayIndex];
 
   return (
@@ -22,10 +26,7 @@ export default function DailyShloka() {
         <View style={styles.divider} />
         <Text style={styles.meaningText}>{shloka.meaning[language]}</Text>
         <View style={styles.sourceRow}>
-          <Text style={styles.sourceLabel}>
-            {language === 'hi' ? '— ' : '— '}
-          </Text>
-          <Text style={styles.sourceText}>{shloka.source}</Text>
+          <Text style={styles.sourceText}>— {shloka.source}</Text>
         </View>
       </View>
     </View>
@@ -87,11 +88,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: 10,
-  },
-  sourceLabel: {
-    fontSize: 12,
-    color: colors.accent,
-    fontStyle: 'italic',
   },
   sourceText: {
     fontSize: 12,
